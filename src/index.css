@@ -1,5 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Noto Sans", sans-serif;
+  background: #e5e5e5;
+  margin: 0;
 }
 
 body h1,
