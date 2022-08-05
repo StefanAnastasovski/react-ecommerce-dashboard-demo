@@ -30,17 +30,17 @@ export const menuItems = [
     title: "Catalogue",
     subtitles: [
       {
-        id: 't2s1',
+        subtitleId: 't2s1',
         subtitle: "Catalog N1",
         link: "/catalog-n1",
       },
       {
-        id: 't2s2',
+        subtitleId: 't2s2',
         subtitle: "Catalog N2",
         link: "/catalog-n2",
       },
       {
-        id: 't2s3',
+        subtitleId: 't2s3',
         subtitle: "Catalog N3",
         link: "/catalog-n3",
       },
@@ -67,47 +67,47 @@ export const menuItems = [
     title: "Marketing",
     subtitles: [
       {
-        id: 't5s1',
+        subtitleId: 't5s1',
         subtitle: "Discount codes",
         link: "/discount-codes",
       },
       {
-        id: 't5s2',
+        subtitleId: 't5s2',
         subtitle: "Exit intent",
         link: "/exit-intent",
       },
       {
-        id: 't5s3',
+        subtitleId: 't5s3',
         subtitle: "Checkout Features",
         link: "/checkout-features",
       },
       {
-        id: 't5s4',
+        subtitleId: 't5s4',
         subtitle: "Post-purchase conversion",
         link: "/post-purchase-conversion",
       },
       {
-        id: 't5s5',
+        subtitleId: 't5s5',
         subtitle: "Cart abandonment",
         link: "/cart-abandonment",
       },
       {
-        id: 't5s6',
+        subtitleId: 't5s6',
         subtitle: "Timer checkout",
         link: "/cart-abandonment",
       },
       {
-        id: 't5s7',
+        subtitleId: 't5s7',
         subtitle: "Sell on Social",
         link: '/sell-on-social"',
       },
       {
-        id: 't5s8',
+        subtitleId: 't5s8',
         subtitle: "Special Offer",
         link: "/special-offer",
       },
       {
-        id: 't5s9',
+        subtitleId: 't5s9',
         subtitle: "Seasonal Offer",
         link: "/seasonal-offer",
       },

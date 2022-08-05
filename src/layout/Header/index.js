@@ -79,7 +79,6 @@ const Header = () => {
           <Grid
             item
             sx={{ display: "flex" }}
-            direction="row"
             alignItems="center"
           >
             {<SvgIcon component={BoltIcon} />}
