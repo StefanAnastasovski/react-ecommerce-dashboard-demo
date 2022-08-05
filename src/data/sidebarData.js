@@ -1,9 +1,9 @@
 import React from "react";
+
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FormatListBulletedOutlinedIcon from "@mui/icons-material/FormatListBulletedOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
-import ModeStandbyOutlinedIcon from "@mui/icons-material/ModeStandbyOutlined";
 import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import AttachMoneyOutlinedIcon from "@mui/icons-material/AttachMoneyOutlined";
 import BrushIcon from "@mui/icons-material/Brush";
@@ -15,6 +15,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import ShareIcon from "@mui/icons-material/Share";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
+import TargetIcon from "../assets/icons/TargetIcon";
 
 export const menuItems = [
   {
@@ -27,7 +28,23 @@ export const menuItems = [
   {
     id: "t2",
     title: "Catalogue",
-    subtitles: [],
+    subtitles: [
+      {
+        id: 't2s1',
+        subtitle: "Catalog N1",
+        link: "/catalog-n1",
+      },
+      {
+        id: 't2s2',
+        subtitle: "Catalog N2",
+        link: "/catalog-n2",
+      },
+      {
+        id: 't2s3',
+        subtitle: "Catalog N3",
+        link: "/catalog-n3",
+      },
+    ],
     link: "/catalogue",
     icon: <ShoppingCartOutlinedIcon />,
   },
@@ -50,44 +67,53 @@ export const menuItems = [
     title: "Marketing",
     subtitles: [
       {
+        id: 't5s1',
         subtitle: "Discount codes",
         link: "/discount-codes",
       },
       {
+        id: 't5s2',
         subtitle: "Exit intent",
         link: "/exit-intent",
       },
       {
+        id: 't5s3',
         subtitle: "Checkout Features",
         link: "/checkout-features",
       },
       {
+        id: 't5s4',
         subtitle: "Post-purchase conversion",
         link: "/post-purchase-conversion",
       },
       {
+        id: 't5s5',
         subtitle: "Cart abandonment",
         link: "/cart-abandonment",
       },
       {
+        id: 't5s6',
         subtitle: "Timer checkout",
         link: "/cart-abandonment",
       },
       {
+        id: 't5s7',
         subtitle: "Sell on Social",
         link: '/sell-on-social"',
       },
       {
+        id: 't5s8',
         subtitle: "Special Offer",
         link: "/special-offer",
       },
       {
+        id: 't5s9',
         subtitle: "Seasonal Offer",
         link: "/seasonal-offer",
       },
     ],
     link: "/marketing",
-    icon: <ModeStandbyOutlinedIcon />,
+    icon: <TargetIcon />,
   },
   {
     id: "t6",

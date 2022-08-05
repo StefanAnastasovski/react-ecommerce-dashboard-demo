@@ -6,7 +6,9 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
+import BoltIcon from "../../assets/icons/BoltIcon";
 import { Grid } from "@mui/material";
+import { SvgIcon } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
@@ -17,6 +19,8 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => {
   return {
+    background: "#ffffff",
+    boxShadow: "none",
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
@@ -42,7 +46,12 @@ const Header = () => {
 
   return (
     <AppBar position="fixed" open={open}>
-      <Toolbar>
+      <Toolbar
+        sx={{
+          borderBottom: 1,
+          borderColor: "rgba(10, 37, 64, 0.24)",
+        }}
+      >
         <IconButton
           color="inherit"
           aria-label="open drawer"
@@ -67,9 +76,15 @@ const Header = () => {
               Dashboard
             </Typography>
           </Grid>
-          <Grid item>
-            <Typography noWrap component="p">
-              <span>icon</span> What's New (2)
+          <Grid
+            item
+            sx={{ display: "flex" }}
+            direction="row"
+            alignItems="center"
+          >
+            {<SvgIcon component={BoltIcon} />}
+            <Typography noWrap component="p" sx={{ pl: 1 }}>
+              What's New (2)
             </Typography>
           </Grid>
         </Grid>

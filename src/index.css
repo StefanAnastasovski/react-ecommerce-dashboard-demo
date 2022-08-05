@@ -1,14 +1,15 @@
 * {
   box-sizing: border-box;
+  font-family: "Noto Sans", sans-serif !important;
+  color: #103b66;
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
   background: #e5e5e5;
   margin: 0;
 }
 
 body h1,
 body a {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro", sans-serif !important;
 }
