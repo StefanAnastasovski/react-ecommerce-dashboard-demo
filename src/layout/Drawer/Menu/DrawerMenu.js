@@ -28,11 +28,11 @@ const StyledListItem = styled(ListItem)(() => ({
   display: "block",
 }));
 
-const StyledListItemButton = styled(ListItemButton)(() => ({
+const StyledListItemButton = styled(ListItemButton)(({ open }) => ({
   flexDirection: "row",
   minHeight: 48,
   padding: "2.5 0 2.5 0",
-  justifyContent: "center",
+  justifyContent: open ? "initial" : "center",
 }));
 
 const StyledListItemIcon = styled(ListItemIcon)(({ open }) => ({
@@ -88,7 +88,12 @@ const DrawerMenu = () => {
                           open={open}
                           sx={{ pl: 4 }}
                         >
-                          <StyledListItemText open={open} primary={subtitle} />
+                          {open && (
+                            <StyledListItemText
+                              open={open}
+                              primary={subtitle}
+                            />
+                          )}
                         </StyledListItemButton>
                       );
                     })}
@@ -101,7 +106,7 @@ const DrawerMenu = () => {
             <StyledListItem key={id} disablePadding sx={{ display: "block" }}>
               <StyledListItemButton open={open}>
                 <StyledListItemIcon open={open}>{icon}</StyledListItemIcon>
-                <ListItemText primary={title} />
+                {open && <ListItemText primary={title} />}
               </StyledListItemButton>
             </StyledListItem>
           );
