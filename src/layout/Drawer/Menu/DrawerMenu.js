@@ -21,6 +21,30 @@ import {
   menuDropdownItems,
 } from "../../../data/sidebarData";
 import { useSelector } from "react-redux";
+import styled from "@emotion/styled";
+
+const StyledListItem = styled(ListItem)(() => ({
+  padding: 0,
+  display: "block",
+}));
+
+const StyledListItemButton = styled(ListItemButton)(() => ({
+  flexDirection: "row",
+  minHeight: 48,
+  padding: "2.5 0 2.5 0",
+  justifyContent: "center",
+}));
+
+const StyledListItemIcon = styled(ListItemIcon)(({ open }) => ({
+  minWidth: 0,
+  marginRight: open ? "1rem" : "auto",
+  justifyContent: "center",
+}));
+
+const StyledListItemText = styled(ListItemText)(({ open }) => ({
+  fontSize: "14px",
+  opacity: open ? 1 : 0,
+}));
 
 const DrawerMenu = () => {
   const open = useSelector((state) => state.drawer.isDrawerOpened);
@@ -32,7 +56,6 @@ const DrawerMenu = () => {
   };
 
   const isExpandedHandler = (id) => {
-    console.log(id);
     setIsExpanded((prevIsExpanded) => ({
       ...prevIsExpanded,
       [id]: !prevIsExpanded[id],
@@ -46,82 +69,41 @@ const DrawerMenu = () => {
           const { id, title, subtitles, icon } = item;
           if (subtitles.length > 0) {
             return (
-              <ListItem
-                key={id}
-                disablePadding
-                sx={{ display: "block" }}
-                onClick={() => isExpandedHandler(id)}
-              >
-                <ListItemButton
-                  sx={{
-                    minHeight: 48,
-                    justifyContent: open ? "initial" : "center",
-                    px: 2.5,
-                  }}
-                >
-                  <ListItemIcon
-                    sx={{
-                      minWidth: 0,
-                      mr: open ? 3 : "auto",
-                      justifyContent: "center",
-                    }}
-                  >
-                    {icon}
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={title}
-                    primaryTypographyProps={{ fontSize: 14 }}
-                    sx={{ opacity: open ? 1 : 0 }}
-                  />
+              <StyledListItem key={id} onClick={() => isExpandedHandler(id)}>
+                <StyledListItemButton open={open}>
+                  <StyledListItemIcon open={open}>{icon}</StyledListItemIcon>
+                  <StyledListItemText open={open} primary={title} />
                   {isExpanded[id] ? (
                     <ExpandLessIcon />
                   ) : (
                     <ExpandMoreIcon sx={{ display: open ? 0 : "none" }} />
                   )}
-                </ListItemButton>
+                </StyledListItemButton>
                 <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
                   <List component="div" disablePadding>
                     {subtitles.map(({ subtitleId, subtitle }) => {
                       return (
-                        <ListItemButton key={subtitleId} sx={{ pl: 4 }}>
-                          <ListItemText
-                            primary={subtitle}
-                            primaryTypographyProps={{ fontSize: 14 }}
-                            sx={{ opacity: open ? 1 : 0 }}
-                          />
-                        </ListItemButton>
+                        <StyledListItemButton
+                          key={subtitleId}
+                          open={open}
+                          sx={{ pl: 4 }}
+                        >
+                          <StyledListItemText open={open} primary={subtitle} />
+                        </StyledListItemButton>
                       );
                     })}
                   </List>
                 </Collapse>
-              </ListItem>
+              </StyledListItem>
             );
           }
           return (
-            <ListItem key={id} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {icon}
-                </ListItemIcon>
-                <ListItemText
-                  primaryTypographyProps={{ fontSize: 14 }}
-                  primary={title}
-                  sx={{ opacity: open ? 1 : 0 }}
-                />
-              </ListItemButton>
-            </ListItem>
+            <StyledListItem key={id} disablePadding sx={{ display: "block" }}>
+              <StyledListItemButton open={open}>
+                <StyledListItemIcon open={open}>{icon}</StyledListItemIcon>
+                <ListItemText primary={title} />
+              </StyledListItemButton>
+            </StyledListItem>
           );
         })}
       </List>
@@ -131,30 +113,12 @@ const DrawerMenu = () => {
           const { id, title, icon } = item;
 
           return (
-            <ListItem key={id} disablePadding sx={{ display: "block" }}>
-              <ListItemButton
-                sx={{
-                  minHeight: 48,
-                  justifyContent: open ? "initial" : "center",
-                  px: 2.5,
-                }}
-              >
-                <ListItemIcon
-                  sx={{
-                    minWidth: 0,
-                    mr: open ? 3 : "auto",
-                    justifyContent: "center",
-                  }}
-                >
-                  {icon}
-                </ListItemIcon>
-                <ListItemText
-                  primaryTypographyProps={{ fontSize: 14 }}
-                  primary={title}
-                  sx={{ opacity: open ? 1 : 0 }}
-                />
-              </ListItemButton>
-            </ListItem>
+            <StyledListItem key={id}>
+              <StyledListItemButton open={open}>
+                <StyledListItemIcon open={open}>{icon}</StyledListItemIcon>
+                <StyledListItemText open={open} primary={title} />
+              </StyledListItemButton>
+            </StyledListItem>
           );
         })}
       </List>
