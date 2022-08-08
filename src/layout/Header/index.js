@@ -6,7 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
-import BoltIcon from "../../assets/icons/BoltIcon";
+import LightningIcon from "../../assets/icons/LightningIcon";
 import { Grid } from "@mui/material";
 import { SvgIcon } from "@mui/material";
 
@@ -89,7 +89,7 @@ const Header = () => {
             </Typography>
           </Grid>
           <Grid item sx={{ display: "flex" }} alignItems="center">
-            {<SvgIcon component={BoltIcon} />}
+            {<SvgIcon component={LightningIcon} />}
             <Typography noWrap component="p" sx={{ pl: 1 }}>
               What's New (2)
             </Typography>
