@@ -20,12 +20,29 @@ import {
   menuAdditionalItems,
   menuDropdownItems,
 } from "../../../data/sidebarData";
-import { useSelector } from "react-redux";
+
 import styled from "@emotion/styled";
+import {
+  MENU_FONT_SIZE,
+  PRIMARY_BACKGROUND_COLOR_ACTIVE,
+  PRIMARY_COLOR_ACTIVE,
+  SECONDARY_BACKGROUND_COLOR_ACTIVE,
+  SECONDARY_COLOR_TEXT,
+} from "../../../data/constants";
+
+import { useSelector } from "react-redux";
 
 const StyledListItem = styled(ListItem)(() => ({
   padding: 0,
   display: "block",
+  "& .MuiCollapse-root": {
+    background: SECONDARY_BACKGROUND_COLOR_ACTIVE,
+    color: SECONDARY_COLOR_TEXT
+  },
+  "&:hover > div:first-child": {
+    borderLeft: `3px solid ${PRIMARY_COLOR_ACTIVE} `,
+    background: PRIMARY_BACKGROUND_COLOR_ACTIVE,
+  },
 }));
 
 const StyledListItemButton = styled(ListItemButton)(({ open }) => ({
@@ -33,6 +50,15 @@ const StyledListItemButton = styled(ListItemButton)(({ open }) => ({
   minHeight: 48,
   padding: "2.5 0 2.5 0",
   justifyContent: open ? "initial" : "center",
+  "&:hover .MuiTypography-root": {
+    color: PRIMARY_COLOR_ACTIVE,
+  },
+  "&:hover svg:not(.target-icon)": {
+    fill: PRIMARY_COLOR_ACTIVE,
+  },
+  "&:hover .target-icon": {
+    stroke: PRIMARY_COLOR_ACTIVE,
+  },
 }));
 
 const StyledListItemIcon = styled(ListItemIcon)(({ open }) => ({
@@ -42,7 +68,7 @@ const StyledListItemIcon = styled(ListItemIcon)(({ open }) => ({
 }));
 
 const StyledListItemText = styled(ListItemText)(({ open }) => ({
-  fontSize: "14px",
+  fontSize: MENU_FONT_SIZE,
   opacity: open ? 1 : 0,
 }));
 

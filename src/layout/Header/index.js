@@ -12,6 +12,7 @@ import { SvgIcon } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
+import { PRIMARY_COLOR_ACTIVE } from "../../data/constants";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
@@ -37,6 +38,21 @@ const AppBar = styled(MuiAppBar, {
   };
 });
 
+const StyledIconButton = styled(IconButton)(({ open }) => {
+  console.log(open);
+
+  return {
+    color: "inherit",
+    display: open && "none",
+    "&:hover svg": {
+      fill: PRIMARY_COLOR_ACTIVE,
+    },
+  };
+});
+
+// "&:hover .MuiButtonBase-root svg": {
+//   fill: "#21B8F9",
+// },
 const Header = () => {
   const dispatch = useDispatch();
   const open = useSelector((state) => state.drawer.isDrawerOpened);
@@ -52,18 +68,14 @@ const Header = () => {
           borderColor: "rgba(10, 37, 64, 0.24)",
         }}
       >
-        <IconButton
-          color="inherit"
-          aria-label="open drawer"
+        <StyledIconButton
           onClick={handleDrawerOpen}
+          open={open}
+          aria-label="open drawer"
           edge="start"
-          sx={{
-            marginRight: 5,
-            ...(open && { display: "none" }),
-          }}
         >
           <MenuIcon />
-        </IconButton>
+        </StyledIconButton>
         <Grid
           container
           direction="row"
@@ -76,11 +88,7 @@ const Header = () => {
               Dashboard
             </Typography>
           </Grid>
-          <Grid
-            item
-            sx={{ display: "flex" }}
-            alignItems="center"
-          >
+          <Grid item sx={{ display: "flex" }} alignItems="center">
             {<SvgIcon component={BoltIcon} />}
             <Typography noWrap component="p" sx={{ pl: 1 }}>
               What's New (2)

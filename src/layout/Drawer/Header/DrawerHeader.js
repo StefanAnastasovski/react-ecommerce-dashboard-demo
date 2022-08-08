@@ -9,6 +9,8 @@ import { Grid } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions } from "../../../store/slices/drawerSlice";
 
+import { PRIMARY_COLOR_ACTIVE } from "../../../data/constants";
+
 const DrawerHeaderComponent = styled("div")(({ theme }) => ({
   display: "flex",
   alignItems: "center",
@@ -16,6 +18,12 @@ const DrawerHeaderComponent = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
+}));
+
+const StyledIconButton = styled(IconButton)(() => ({
+  "&:hover svg": {
+    fill: PRIMARY_COLOR_ACTIVE,
+  },
 }));
 
 const DrawerHeader = () => {
@@ -41,7 +49,9 @@ const DrawerHeader = () => {
             </a>
           </Grid>
           <Grid item>
-            <IconButton onClick={handleDrawerClose}>{<MenuIcon />}</IconButton>
+            <StyledIconButton onClick={handleDrawerClose}>
+              <MenuIcon />
+            </StyledIconButton>
           </Grid>
         </Grid>
       )}
