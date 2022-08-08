@@ -37,9 +37,9 @@ const StyledListItem = styled(ListItem)(() => ({
   display: "block",
   "& .MuiCollapse-root": {
     background: SECONDARY_BACKGROUND_COLOR_ACTIVE,
-    color: SECONDARY_COLOR_TEXT
+    color: SECONDARY_COLOR_TEXT,
   },
-  "&:hover > div:first-child": {
+  "&:hover > div:first-of-type": {
     borderLeft: `3px solid ${PRIMARY_COLOR_ACTIVE} `,
     background: PRIMARY_BACKGROUND_COLOR_ACTIVE,
   },

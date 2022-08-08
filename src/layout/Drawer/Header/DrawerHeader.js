@@ -4,12 +4,13 @@ import { styled } from "@mui/material/styles";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import LogoImg from "../../../assets/images/logo/vetrinalive-logo.png";
-import { Grid } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions } from "../../../store/slices/drawerSlice";
 
 import { PRIMARY_COLOR_ACTIVE } from "../../../data/constants";
+import GridContainerHeader from "../../../components/Grid/GridContainerHeader";
+import GridItem from "../../../components/Grid/GridItem";
 
 const DrawerHeaderComponent = styled("div")(({ theme }) => ({
   display: "flex",
@@ -36,24 +37,18 @@ const DrawerHeader = () => {
   return (
     <DrawerHeaderComponent>
       {open && (
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-          sx={{ my: 2, mx: 2 }}
-        >
-          <Grid item>
+        <GridContainerHeader>
+          <GridItem>
             <a href="/">
               <img src={LogoImg} alt="Vetrinalive Logo" />
             </a>
-          </Grid>
-          <Grid item>
+          </GridItem>
+          <GridItem>
             <StyledIconButton onClick={handleDrawerClose}>
               <MenuIcon />
             </StyledIconButton>
-          </Grid>
-        </Grid>
+          </GridItem>
+        </GridContainerHeader>
       )}
     </DrawerHeaderComponent>
   );

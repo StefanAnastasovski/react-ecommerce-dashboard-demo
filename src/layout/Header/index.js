@@ -7,12 +7,16 @@ import Typography from "@mui/material/Typography";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import LightningIcon from "../../assets/icons/LightningIcon";
-import { Grid } from "@mui/material";
 import { SvgIcon } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
-import { PRIMARY_COLOR_ACTIVE } from "../../data/constants";
+import {
+  BACKGROUND_COLOR_WHITE,
+  PRIMARY_COLOR_ACTIVE,
+} from "../../data/constants";
+import GridContainerHeader from "../../components/Grid/GridContainerHeader";
+import GridItem from "../../components/Grid/GridItem";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
@@ -20,7 +24,7 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => {
   return {
-    background: "#ffffff",
+    background: BACKGROUND_COLOR_WHITE,
     boxShadow: "none",
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["width", "margin"], {
@@ -39,8 +43,6 @@ const AppBar = styled(MuiAppBar, {
 });
 
 const StyledIconButton = styled(IconButton)(({ open }) => {
-  console.log(open);
-
   return {
     color: "inherit",
     display: open && "none",
@@ -50,9 +52,6 @@ const StyledIconButton = styled(IconButton)(({ open }) => {
   };
 });
 
-// "&:hover .MuiButtonBase-root svg": {
-//   fill: "#21B8F9",
-// },
 const Header = () => {
   const dispatch = useDispatch();
   const open = useSelector((state) => state.drawer.isDrawerOpened);
@@ -76,25 +75,19 @@ const Header = () => {
         >
           <MenuIcon />
         </StyledIconButton>
-        <Grid
-          container
-          direction="row"
-          justifyContent="space-between"
-          alignItems="center"
-          sx={{ my: 2, mx: 2 }}
-        >
-          <Grid item>
+        <GridContainerHeader>
+          <GridItem>
             <Typography noWrap component="p">
               Dashboard
             </Typography>
-          </Grid>
-          <Grid item sx={{ display: "flex" }} alignItems="center">
+          </GridItem>
+          <GridItem sx={{ display: "flex" }} alignItems="center">
             {<SvgIcon component={LightningIcon} />}
             <Typography noWrap component="p" sx={{ pl: 1 }}>
               What's New (2)
             </Typography>
-          </Grid>
-        </Grid>
+          </GridItem>
+        </GridContainerHeader>
       </Toolbar>
     </AppBar>
   );
