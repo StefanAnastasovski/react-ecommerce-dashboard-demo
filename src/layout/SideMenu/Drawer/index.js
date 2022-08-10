@@ -1,11 +1,10 @@
 import React from "react";
+
 import { styled } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
-import DrawerHeader from "./Header/DrawerHeader";
-import DrawerMenu from "./Menu/DrawerMenu";
 
-import { getDrawerWidth } from "../../store/slices/drawerSlice";
 import { useSelector } from "react-redux";
+import { getDrawerWidth } from "../../../store/slices/drawerSlice";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
@@ -34,7 +33,7 @@ const closedMixin = (theme) => {
   };
 };
 
-const Drawer = styled(MuiDrawer, {
+const DrawerComponent = styled(MuiDrawer, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => {
   if (!open) open = useSelector((state) => state.drawer.isDrawerOpened);
@@ -54,13 +53,8 @@ const Drawer = styled(MuiDrawer, {
   };
 });
 
-const MiniDrawer = () => {
-  return (
-    <Drawer variant="permanent">
-      <DrawerHeader />
-      <DrawerMenu />
-    </Drawer>
-  );
-};
+const Drawer = ({ children }) => (
+  <DrawerComponent variant="permanent">{children}</DrawerComponent>
+);
 
-export default MiniDrawer;
+export default Drawer;

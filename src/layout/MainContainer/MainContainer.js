@@ -2,8 +2,8 @@ import React from "react";
 
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
+import DrawerHeader from "../SideMenu/DrawerHeader";
 
-import DrawerHeader from "../Drawer/Header/DrawerHeader";
 
 const MainContainer = () => {
   return (
