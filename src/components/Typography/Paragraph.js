@@ -4,7 +4,7 @@ import { Typography } from "@mui/material";
 
 const Paragraph = ({ children, ...otherProps }) => {
   return (
-    <Typography component="p" {...otherProps}>
+    <Typography paragraph mb={0} {...otherProps}>
       {children}
     </Typography>
   );
