@@ -1,17 +1,24 @@
-import React, { useState } from "react";
+import React from "react";
 
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { dropdownMenuItems } from "../../../../data/sidebarData";
+import { drawerActions } from "../../../../store/slices/drawerSlice";
 
 const DrawerDropdown = () => {
   const open = useSelector((state) => state.drawer.isDrawerOpened);
-  const [shop, setShop] = useState(dropdownMenuItems[0].title);
+  const dropdownItem = useSelector(
+    (state) => state.drawer.selectedDropdownItem
+  );
+
+  const dispatch = useDispatch();
 
   const handleChange = (event) => {
-    setShop(event.target.value);
+    dispatch(
+      drawerActions.setSelectedDropdownItem({ title: event.target.value })
+    );
   };
 
   const dropdownItems = dropdownMenuItems.map((item) => {
@@ -36,7 +43,7 @@ const DrawerDropdown = () => {
           <Select
             labelId="select-your-shop-label"
             id="select-your-shop"
-            value={shop}
+            value={dropdownItem}
             onChange={handleChange}
             IconComponent={ExpandMoreIcon}
           >

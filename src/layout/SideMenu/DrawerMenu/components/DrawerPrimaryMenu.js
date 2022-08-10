@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { List } from "@mui/material";
 
@@ -7,15 +7,6 @@ import { primaryMenuItems } from "../../../../data/sidebarData";
 import DrawerItem from "./DrawerItem";
 
 const DrawerPrimaryMenu = () => {
-  const [isExpanded, setIsExpanded] = useState({});
-
-  const isExpandedHandler = (id) => {
-    setIsExpanded((prevIsExpanded) => ({
-      ...prevIsExpanded,
-      [id]: !prevIsExpanded[id],
-    }));
-  };
-
   const menuItems = primaryMenuItems.map((item) => {
     const { id, title, subtitles, icon } = item;
 
@@ -23,13 +14,12 @@ const DrawerPrimaryMenu = () => {
       return (
         <DrawerItem
           key={id}
-          isExpanded={isExpanded[id] ? true : false}
           data={{
+            id: id,
             title: title,
             icon: icon,
             subtitles: subtitles,
           }}
-          onClick={() => isExpandedHandler(id)}
         />
       );
     }
@@ -37,6 +27,7 @@ const DrawerPrimaryMenu = () => {
       <DrawerItem
         key={id}
         data={{
+          id: id,
           title: title,
           icon: icon,
           subtitles: subtitles,
