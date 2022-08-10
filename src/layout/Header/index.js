@@ -13,10 +13,10 @@ import {
   BACKGROUND_COLOR_WHITE,
   PRIMARY_BORDER_COLOR,
 } from "../../data/constants";
-import GridContainerHeader from "../../components/Grid/GridContainerHeader";
+import GridContainerHeader from "./components/GridContainerHeader";
 import GridItem from "../../components/Grid/GridItem";
 import StyledIconButton from "../../components/ui/Button/StyledIconButton";
-import Paragraph from "../../components/Typograhpy/Paragraph";
+import Paragraph from "../../components/Typography/Paragraph";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
