@@ -22,7 +22,7 @@ export const primaryMenuItems = [
     id: "t1",
     title: "Dashboard",
     subtitles: [],
-    link: "/dashboard",
+    link: "/",
     icon: <HomeOutlinedIcon />,
   },
   {
