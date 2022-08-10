@@ -17,7 +17,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import TargetIcon from "../assets/icons/TargetIcon";
 
-export const menuItems = [
+export const primaryMenuItems = [
   {
     id: "t1",
     title: "Dashboard",
@@ -30,17 +30,17 @@ export const menuItems = [
     title: "Catalogue",
     subtitles: [
       {
-        subtitleId: 't2s1',
+        subtitleId: "t2s1",
         subtitle: "Catalog N1",
         link: "/catalog-n1",
       },
       {
-        subtitleId: 't2s2',
+        subtitleId: "t2s2",
         subtitle: "Catalog N2",
         link: "/catalog-n2",
       },
       {
-        subtitleId: 't2s3',
+        subtitleId: "t2s3",
         subtitle: "Catalog N3",
         link: "/catalog-n3",
       },
@@ -67,47 +67,47 @@ export const menuItems = [
     title: "Marketing",
     subtitles: [
       {
-        subtitleId: 't5s1',
+        subtitleId: "t5s1",
         subtitle: "Discount codes",
         link: "/discount-codes",
       },
       {
-        subtitleId: 't5s2',
+        subtitleId: "t5s2",
         subtitle: "Exit intent",
         link: "/exit-intent",
       },
       {
-        subtitleId: 't5s3',
+        subtitleId: "t5s3",
         subtitle: "Checkout Features",
         link: "/checkout-features",
       },
       {
-        subtitleId: 't5s4',
+        subtitleId: "t5s4",
         subtitle: "Post-purchase conversion",
         link: "/post-purchase-conversion",
       },
       {
-        subtitleId: 't5s5',
+        subtitleId: "t5s5",
         subtitle: "Cart abandonment",
         link: "/cart-abandonment",
       },
       {
-        subtitleId: 't5s6',
+        subtitleId: "t5s6",
         subtitle: "Timer checkout",
         link: "/cart-abandonment",
       },
       {
-        subtitleId: 't5s7',
+        subtitleId: "t5s7",
         subtitle: "Sell on Social",
         link: '/sell-on-social"',
       },
       {
-        subtitleId: 't5s8',
+        subtitleId: "t5s8",
         subtitle: "Special Offer",
         link: "/special-offer",
       },
       {
-        subtitleId: 't5s9',
+        subtitleId: "t5s9",
         subtitle: "Seasonal Offer",
         link: "/seasonal-offer",
       },
@@ -173,7 +173,7 @@ export const menuItems = [
   },
 ];
 
-export const menuAdditionalItems = [
+export const secondaryMenuItems = [
   {
     id: "ta1",
     title: "Customer Support",
@@ -194,7 +194,7 @@ export const menuAdditionalItems = [
   },
 ];
 
-export const menuDropdownItems = [
+export const dropdownMenuItems = [
   {
     id: "td1",
     title: "Fenoh Store",
