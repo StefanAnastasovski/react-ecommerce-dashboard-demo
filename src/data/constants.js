@@ -13,3 +13,6 @@ export const SECONDARY_COLOR_TEXT = "#233B53";
 
 // font-size
 export const MENU_FONT_SIZE = "14px";
+
+// border
+export const PRIMARY_BORDER_COLOR = "rgba(10, 37, 64, 0.24)";

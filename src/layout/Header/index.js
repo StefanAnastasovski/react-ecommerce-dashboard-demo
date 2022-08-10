@@ -3,7 +3,6 @@ import React from "react";
 import { styled } from "@mui/material/styles";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import MenuIcon from "@mui/icons-material/Menu";
 import LightningIcon from "../../assets/icons/LightningIcon";
 import { SvgIcon } from "@mui/material";
@@ -17,6 +16,7 @@ import {
 import GridContainerHeader from "../../components/Grid/GridContainerHeader";
 import GridItem from "../../components/Grid/GridItem";
 import StyledIconButton from "../../components/ui/Button/StyledIconButton";
+import Paragraph from "../../components/Typograhpy/Paragraph";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
@@ -70,15 +70,14 @@ const Header = () => {
 
         <GridContainerHeader>
           <GridItem>
-            <Typography noWrap component="p">
-              Dashboard
-            </Typography>
+            <Paragraph noWrap>Dashboard</Paragraph>
           </GridItem>
+
           <GridItem sx={{ display: "flex" }} alignItems="center">
-            {<SvgIcon component={LightningIcon} />}
-            <Typography noWrap component="p" sx={{ pl: 1 }}>
+            <SvgIcon component={LightningIcon} />
+            <Paragraph noWrap sx={{ pl: 1 }}>
               What's New (2)
-            </Typography>
+            </Paragraph>
           </GridItem>
         </GridContainerHeader>
       </Toolbar>
