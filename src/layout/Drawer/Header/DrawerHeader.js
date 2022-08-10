@@ -1,16 +1,15 @@
 import React from "react";
 
 import { styled } from "@mui/material/styles";
-import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import LogoImg from "../../../assets/images/logo/vetrinalive-logo.png";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions } from "../../../store/slices/drawerSlice";
 
-import { PRIMARY_COLOR_ACTIVE } from "../../../data/constants";
 import GridContainerHeader from "../../../components/Grid/GridContainerHeader";
 import GridItem from "../../../components/Grid/GridItem";
+import StyledIconButton from "../../../components/ui/Button/StyledIconButton";
 
 const DrawerHeaderComponent = styled("div")(({ theme }) => ({
   display: "flex",
@@ -19,12 +18,6 @@ const DrawerHeaderComponent = styled("div")(({ theme }) => ({
   padding: theme.spacing(0, 1),
   // necessary for content to be below app bar
   ...theme.mixins.toolbar,
-}));
-
-const StyledIconButton = styled(IconButton)(() => ({
-  "&:hover svg": {
-    fill: PRIMARY_COLOR_ACTIVE,
-  },
 }));
 
 const DrawerHeader = () => {
@@ -44,7 +37,10 @@ const DrawerHeader = () => {
             </a>
           </GridItem>
           <GridItem>
-            <StyledIconButton onClick={handleDrawerClose}>
+            <StyledIconButton
+              onClick={handleDrawerClose}
+              styleProps={{ style: null }}
+            >
               <MenuIcon />
             </StyledIconButton>
           </GridItem>

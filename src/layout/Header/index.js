@@ -4,7 +4,6 @@ import { styled } from "@mui/material/styles";
 import MuiAppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import LightningIcon from "../../assets/icons/LightningIcon";
 import { SvgIcon } from "@mui/material";
@@ -13,10 +12,11 @@ import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
 import {
   BACKGROUND_COLOR_WHITE,
-  PRIMARY_COLOR_ACTIVE,
+  PRIMARY_BORDER_COLOR,
 } from "../../data/constants";
 import GridContainerHeader from "../../components/Grid/GridContainerHeader";
 import GridItem from "../../components/Grid/GridItem";
+import StyledIconButton from "../../components/ui/Button/StyledIconButton";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
@@ -42,16 +42,6 @@ const AppBar = styled(MuiAppBar, {
   };
 });
 
-const StyledIconButton = styled(IconButton)(({ open }) => {
-  return {
-    color: "inherit",
-    display: open && "none",
-    "&:hover svg": {
-      fill: PRIMARY_COLOR_ACTIVE,
-    },
-  };
-});
-
 const Header = () => {
   const dispatch = useDispatch();
   const open = useSelector((state) => state.drawer.isDrawerOpened);
@@ -64,17 +54,20 @@ const Header = () => {
       <Toolbar
         sx={{
           borderBottom: 1,
-          borderColor: "rgba(10, 37, 64, 0.24)",
+          borderColor: PRIMARY_BORDER_COLOR,
         }}
       >
         <StyledIconButton
           onClick={handleDrawerOpen}
-          open={open}
           aria-label="open drawer"
           edge="start"
+          styleProps={{
+            style: { color: "inherit", display: open && "none" },
+          }}
         >
           <MenuIcon />
         </StyledIconButton>
+
         <GridContainerHeader>
           <GridItem>
             <Typography noWrap component="p">
