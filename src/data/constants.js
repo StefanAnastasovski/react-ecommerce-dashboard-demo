@@ -16,3 +16,6 @@ export const MENU_FONT_SIZE = "14px";
 
 // border
 export const PRIMARY_BORDER_COLOR = "rgba(10, 37, 64, 0.24)";
+
+// Destinations
+export const HOME_PAGE_PATH = "/";
