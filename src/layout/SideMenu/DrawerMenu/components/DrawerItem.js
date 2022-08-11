@@ -21,6 +21,7 @@ import {
   SECONDARY_COLOR_TEXT,
 } from "../../../../data/constants";
 import { drawerActions } from "../../../../store/slices/drawerSlice";
+import NotificationEllipse from "../../../../components/NotificationEllipse";
 
 const StyledListItem = styled(ListItem)(() => {
   return {
@@ -78,13 +79,18 @@ const StyledListItemText = styled(ListItemText)(({ open }) => ({
   opacity: open ? 1 : 0,
 }));
 
-const DrawerItem = ({ data, selectItemHandler, styleProps, ...otherProps }) => {
+const DrawerItem = ({
+  data,
+  selectItemHandler,
+  styleProps,
+  orders,
+  ...otherProps
+}) => {
   const open = useSelector((state) => state.drawer.isDrawerOpened);
   const isExpanded = useSelector((state) => state.drawer.isExpanded);
   const selectedItem = useSelector((state) => state.drawer.selectedMenuItemId);
 
   const dispatch = useDispatch();
-
   const { id, title, subtitles, icon } = data;
 
   let expandIcon = null;
@@ -93,6 +99,15 @@ const DrawerItem = ({ data, selectItemHandler, styleProps, ...otherProps }) => {
       <ExpandLessIcon />
     ) : (
       <ExpandMoreIcon sx={{ display: open ? 0 : "none" }} />
+    );
+  }
+
+  let newsIcon = null;
+  if (orders) {
+    newsIcon = (
+      <NotificationEllipse backgroundColor={"#00C48C"}>
+        {orders.length}
+      </NotificationEllipse>
     );
   }
 
@@ -125,7 +140,7 @@ const DrawerItem = ({ data, selectItemHandler, styleProps, ...otherProps }) => {
       </ListItem>
     );
   });
-  
+
   return (
     <>
       <StyledListItem
@@ -142,6 +157,7 @@ const DrawerItem = ({ data, selectItemHandler, styleProps, ...otherProps }) => {
           {open && <ListItemText primary={title} />}
 
           {expandIcon && expandIcon}
+          {newsIcon && newsIcon}
         </StyledListItemButton>
         <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
           <List component="ul" disablePadding>

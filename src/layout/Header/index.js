@@ -10,7 +10,7 @@ import { SvgIcon } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
 import {
-  BACKGROUND_COLOR_WHITE,
+  WHITE_COLOR,
   PRIMARY_BORDER_COLOR,
 } from "../../data/constants";
 import GridContainerHeader from "./components/GridContainerHeader";
@@ -24,7 +24,7 @@ const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => {
   return {
-    background: BACKGROUND_COLOR_WHITE,
+    background: WHITE_COLOR,
     boxShadow: "none",
     zIndex: theme.zIndex.drawer + 1,
     transition: theme.transitions.create(["width", "margin"], {

@@ -2,8 +2,6 @@
 export const PRIMARY_COLOR_ACTIVE = "#21B8F9";
 
 // background
-export const BACKGROUND_COLOR_WHITE = "#FFFFFF";
-
 export const PRIMARY_BACKGROUND_COLOR_ACTIVE = "#F7F7F7";
 export const SECONDARY_BACKGROUND_COLOR_ACTIVE = "#E9F8FE";
 
@@ -16,6 +14,9 @@ export const MENU_FONT_SIZE = "14px";
 
 // border
 export const PRIMARY_BORDER_COLOR = "rgba(10, 37, 64, 0.24)";
+
+// colors
+export const WHITE_COLOR = "#FFFFFF";
 
 // Destinations
 export const HOME_PAGE_PATH = "/";
