@@ -7,11 +7,11 @@ import { PRIMARY_COLOR_ACTIVE } from "../../../data/constants";
 
 const StyledIconButton = ({
   children,
-  styleProps: { style },
+  styleProps,
   ...otherProps
 }) => {
   const StyledIconButton = styled(IconButton)(() => ({
-    ...style,
+    ...styleProps,
     "&:hover svg": {
       fill: PRIMARY_COLOR_ACTIVE,
     },

@@ -17,14 +17,14 @@ import {
   PRIMARY_RED_COLOR,
   HEADER_BUTTON_FONT_SIZE,
 } from "../../data/constants";
+import { primaryMenuItems, secondaryMenuItems } from "../../data/sidebarData";
+import { mainNewsToday } from "../../data/mainNewsToday";
 
-import GridContainerHeader from "./components/GridContainerHeader";
 import GridItem from "../../components/Grid/GridItem";
 import StyledIconButton from "../../components/ui/Button/StyledIconButton";
 import Paragraph from "../../components/Typography/Paragraph";
-import { primaryMenuItems, secondaryMenuItems } from "../../data/sidebarData";
 import NotificationEllipse from "../../components/NotificationEllipse";
-import { mainNewsToday } from "../../data/mainNewsToday";
+import GridContainerHeader from "../../components/Grid/GridContainerHeader";
 
 const DRAWER_WIDTH = getDrawerWidth();
 

@@ -2,17 +2,17 @@ import React from "react";
 
 import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions } from "../../../store/slices/drawerSlice";
 import LogoImg from "../../../assets/images/logo/vetrinalive-logo.png";
 import { HOME_PAGE_PATH } from "../../../data/constants";
 
-import GridContainerHeader from "../../Header/components/GridContainerHeader";
 import GridItem from "../../../components/Grid/GridItem";
 import StyledIconButton from "../../../components/ui/Button/StyledIconButton";
 import Image from "../../../components/Image";
-import { Link } from "@mui/material";
+import GridContainerHeader from "../../../components/Grid/GridContainerHeader";
 
 const DrawerHeaderComponent = styled("div")(({ theme }) => ({
   display: "flex",
