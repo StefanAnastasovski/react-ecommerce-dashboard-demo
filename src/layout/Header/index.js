@@ -9,12 +9,22 @@ import { SvgIcon } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
-import { WHITE_COLOR, PRIMARY_BORDER_COLOR } from "../../data/constants";
+import {
+  WHITE_COLOR,
+  PRIMARY_BORDER_COLOR,
+  FONT_WEIGHT_500,
+  LINK_N_TEXT_FONT_SIZE,
+  PRIMARY_RED_COLOR,
+  HEADER_BUTTON_FONT_SIZE,
+} from "../../data/constants";
+
 import GridContainerHeader from "./components/GridContainerHeader";
 import GridItem from "../../components/Grid/GridItem";
 import StyledIconButton from "../../components/ui/Button/StyledIconButton";
 import Paragraph from "../../components/Typography/Paragraph";
 import { primaryMenuItems, secondaryMenuItems } from "../../data/sidebarData";
+import NotificationEllipse from "../../components/NotificationEllipse";
+import { mainNewsToday } from "../../data/mainNewsToday";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
@@ -57,6 +67,22 @@ const Header = () => {
     }
   ).title;
 
+  const mainNewsValue = mainNewsToday.length;
+
+  const showMenuIcon = (
+    <>
+      {!open && (
+        <StyledIconButton
+          onClick={handleDrawerOpen}
+          aria-label="open drawer"
+          edge="start"
+        >
+          <MenuIcon />
+        </StyledIconButton>
+      )}
+    </>
+  );
+
   return (
     <AppBar position="fixed" open={open}>
       <Toolbar
@@ -65,27 +91,33 @@ const Header = () => {
           borderColor: PRIMARY_BORDER_COLOR,
         }}
       >
-        <StyledIconButton
-          onClick={handleDrawerOpen}
-          aria-label="open drawer"
-          edge="start"
-          styleProps={{
-            style: { color: "inherit", display: open && "none" },
-          }}
-        >
-          <MenuIcon />
-        </StyledIconButton>
+        {showMenuIcon}
 
         <GridContainerHeader>
           <GridItem>
-            <Paragraph noWrap>{pageTitleId}</Paragraph>
+            <Paragraph
+              noWrap
+              sx={{
+                fontSize: LINK_N_TEXT_FONT_SIZE,
+                fontWeight: FONT_WEIGHT_500,
+              }}
+            >
+              {pageTitleId}
+            </Paragraph>
           </GridItem>
 
-          <GridItem sx={{ display: "flex" }} alignItems="center">
+          <GridItem sx={{ display: "flex", alignItems: "center" }}>
             <SvgIcon component={LightningIcon} />
-            <Paragraph noWrap sx={{ pl: 1 }}>
-              What's New (2)
+            <Paragraph noWrap sx={{ pl: 1, fontSize: HEADER_BUTTON_FONT_SIZE }}>
+              What's New
             </Paragraph>
+            <NotificationEllipse
+              backgroundColor={PRIMARY_RED_COLOR}
+              mt={-3}
+              ml={-1}
+            >
+              {mainNewsValue}
+            </NotificationEllipse>
           </GridItem>
         </GridContainerHeader>
       </Toolbar>

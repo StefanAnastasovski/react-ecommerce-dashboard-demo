@@ -3,7 +3,7 @@ import React from "react";
 import { Box } from "@mui/material";
 import { MENU_FONT_SIZE, WHITE_COLOR } from "../data/constants";
 
-const NotificationEllipse = ({ backgroundColor, children }) => {
+const NotificationEllipse = ({ backgroundColor, children, ...otherProps}) => {
   return (
     <Box
       sx={{
@@ -14,6 +14,7 @@ const NotificationEllipse = ({ backgroundColor, children }) => {
         fontSize: MENU_FONT_SIZE,
         color: WHITE_COLOR,
       }}
+      {...otherProps}
     >
       {children}
     </Box>

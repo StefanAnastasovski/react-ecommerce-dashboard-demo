@@ -13,6 +13,7 @@ export const SECONDARY_COLOR_TEXT = "#233B53";
 
 // font-size
 export const MENU_FONT_SIZE = "14px";
+export const HEADER_BUTTON_FONT_SIZE = "15px";
 export const LINK_N_TEXT_FONT_SIZE = "17px";
 export const CARD_TITLE_FONT_SIZE_1 = "20px";
 export const CARD_TITLE_FONT_SIZE_2 = "22px";
@@ -28,6 +29,7 @@ export const PRIMARY_BORDER_COLOR = "rgba(10, 37, 64, 0.24)";
 
 // colors
 export const WHITE_COLOR = "#FFFFFF";
+export const PRIMARY_RED_COLOR = "#F33451";
 
 // Destinations
 export const HOME_PAGE_PATH = "/";
