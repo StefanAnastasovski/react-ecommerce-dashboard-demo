@@ -156,14 +156,14 @@ const DrawerItem = ({
 
           {open && <ListItemText primary={title} />}
 
-          {expandIcon && expandIcon}
+          {expandIcon && open && expandIcon}
           {newsIcon && open && newsIcon}
         </StyledListItemButton>
-        <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
+        {open && <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
           <List component="ul" disablePadding>
             {submenuItems}
           </List>
-        </Collapse>
+        </Collapse>}
       </StyledListItem>
     </>
   );
