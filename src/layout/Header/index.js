@@ -9,14 +9,12 @@ import { SvgIcon } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
 import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
-import {
-  WHITE_COLOR,
-  PRIMARY_BORDER_COLOR,
-} from "../../data/constants";
+import { WHITE_COLOR, PRIMARY_BORDER_COLOR } from "../../data/constants";
 import GridContainerHeader from "./components/GridContainerHeader";
 import GridItem from "../../components/Grid/GridItem";
 import StyledIconButton from "../../components/ui/Button/StyledIconButton";
 import Paragraph from "../../components/Typography/Paragraph";
+import { primaryMenuItems, secondaryMenuItems } from "../../data/sidebarData";
 
 const DRAWER_WIDTH = getDrawerWidth();
 
@@ -49,6 +47,16 @@ const Header = () => {
     dispatch(drawerActions.setDrawerOpen());
   };
 
+  const selectedMenuItemId = useSelector(
+    (state) => state.drawer.selectedMenuItemId
+  );
+
+  let pageTitleId = [...primaryMenuItems, ...secondaryMenuItems].find(
+    (item) => {
+      return item.id === selectedMenuItemId.id;
+    }
+  ).title;
+
   return (
     <AppBar position="fixed" open={open}>
       <Toolbar
@@ -70,7 +78,7 @@ const Header = () => {
 
         <GridContainerHeader>
           <GridItem>
-            <Paragraph noWrap>Dashboard</Paragraph>
+            <Paragraph noWrap>{pageTitleId}</Paragraph>
           </GridItem>
 
           <GridItem sx={{ display: "flex" }} alignItems="center">
