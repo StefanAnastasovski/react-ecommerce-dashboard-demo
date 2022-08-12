@@ -4,7 +4,7 @@ import Card from "@mui/material/Card";
 
 import { WHITE_COLOR } from "../../../data/constants";
 
-const CardComponent = ({ children, backgroundColor, height }) => {
+const CardComponent = ({ children, backgroundColor, height, ...otherProps}) => {
   const cardStyle = {
     sx: {
       display: "flex",
@@ -20,7 +20,7 @@ const CardComponent = ({ children, backgroundColor, height }) => {
     },
   };
 
-  return <Card {...cardStyle}>{children}</Card>;
+  return <Card {...cardStyle} {...otherProps}>{children}</Card>;
 };
 
 export default CardComponent;
