@@ -2,9 +2,15 @@ import React from "react";
 
 import EyeIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import OrderList from "@mui/icons-material/FormatListBulletedOutlined";
+
+import { CARD_BACKGROUND_COLOR_ORANGE } from "./constants";
+import APPSTORE_IMG from "../assets/images/app-store.png";
+import GOOGLEPLAY_IMG from "../assets/images/google-play-store.png";
+import MarketPlaceIcon from "../assets/icons/MarketplaceIcon";
+
 import VisitorCardBody from "../layout/MainContainer/cards/VisitorCardBody";
 import OrderCardBody from "../layout/MainContainer/cards/OrderCardBody";
-import MarketPlaceIcon from "../assets/icons/MarketplaceIcon";
+import MobileCardBody from "../layout/MainContainer/cards/MobileCardBody";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -96,6 +102,9 @@ export const CARD_DETAILS = [
       href: "/",
       hasIcon: true,
     },
+    style: {
+      height: null,
+    },
   },
 
   {
@@ -113,21 +122,52 @@ export const CARD_DETAILS = [
       href: "/",
       hasIcon: false,
     },
+    style: {
+      height: null,
+    },
   },
   {
     id: "cd3",
     header: {
       icon: "",
-      title: "Sell your products on your exclusive APP published on the stores",
+      title: "",
       hasDropdown: false,
     },
     body: {
-      content: <VisitorCardBody />,
+      content: (
+        <MobileCardBody
+          body={{
+            title:
+              "Sell your products on your exclusive APP published on the stores",
+            linkContent: "Show More",
+            href: "https://www.apple.com/app-store/",
+            hasIcon: true,
+          }}
+          footer={[
+            {
+              id: "stimg1",
+              source: APPSTORE_IMG,
+              alt: "App Store",
+              href: "https://apple.com",
+            },
+            {
+              id: "stimg2",
+              source: GOOGLEPLAY_IMG,
+              alt: "Google Play Store",
+              href: "https://google.com",
+            },
+          ]}
+        />
+      ),
     },
     footer: {
-      text: "Show more",
+      text: "",
       href: "/",
       hasIcon: true,
+    },
+    style: {
+      height: "343px",
+      backgroundColor: CARD_BACKGROUND_COLOR_ORANGE,
     },
   },
   {
@@ -144,6 +184,9 @@ export const CARD_DETAILS = [
       text: "Discover all extensions",
       href: "/",
       hasIcon: true,
+    },
+    style: {
+      height: "343px",
     },
   },
 ];

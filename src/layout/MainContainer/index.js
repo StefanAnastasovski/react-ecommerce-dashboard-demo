@@ -18,24 +18,8 @@ const MainContainer = () => {
         </GridItem>
 
         {/* Sidebar*/}
-        {/* <GridItem xs={4}>
-          <GridContainer spacing={3} wrap={"wrap"}>
-            <GridItem {...flexGrowStyle}>
-              <CardComponent>Card #1</CardComponent>
-            </GridItem>
-
-            <GridItem {...flexGrowStyle}>
-              <CardComponent backgroundColor={"#000032"}>Card #2</CardComponent>
-            </GridItem>
-            <GridItem {...flexGrowStyle}>
-              <CardComponent>Card #3</CardComponent>
-            </GridItem>
-
-            <GridItem {...flexGrowStyle}>
-              <CardComponent>Card #4</CardComponent>
-            </GridItem>
-          </GridContainer>
-        </GridItem> */}
+        <GridItem xs={4}>
+        </GridItem>
       </GridContainer>
     </Box>
   );

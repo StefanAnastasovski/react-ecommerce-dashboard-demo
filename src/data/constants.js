@@ -6,13 +6,13 @@ export const PRIMARY_BACKGROUND_COLOR_ACTIVE = "#F7F7F7";
 export const SECONDARY_BACKGROUND_COLOR_ACTIVE = "#E9F8FE";
 export const BACKGROUND_LINEAR_GRADIENT_AQUA =
   "linear-gradient(180deg, #21B8F9 0%, rgba(33, 184, 249, 0) 132.05%)";
+export const CARD_BACKGROUND_COLOR_ORANGE = "#F3A35C";
 
 // text
 export const PRIMARY_COLOR_TEXT = "#103B66";
 export const SECONDARY_COLOR_TEXT = "#233B53";
 export const CARD_DROPDOWN_COLOR_TEXT = "#666666";
 export const CARD_ORDER_BODY_COLOR_TEXT = "#6C7C8C";
-
 
 // font-size
 export const MENU_FONT_SIZE = "14px";

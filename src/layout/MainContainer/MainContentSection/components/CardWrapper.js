@@ -12,29 +12,38 @@ const CardWrapper = ({
   headerDetails,
   bodyDetails: { content },
   footerDetails,
+  style: {backgroundColor, height, width},
 }) => {
   const { icon, title, hasDropdown } = headerDetails;
   const { text, href, hasIcon } = footerDetails;
+
+  const defaultCard = (
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "space-between",
+        flexGrow: 1,
+      }}
+    >
+      <MainContentCardHeader
+        icon={icon}
+        title={title}
+        hasDropdown={hasDropdown}
+      />
+      <MainContentCardBody>{content}</MainContentCardBody>
+
+      <MainContentCardFooter text={text} href={href} hasIcon={hasIcon} />
+    </Box>
+  );
+
   return (
-    <GridItem sx={{ flexGrow: 1, width: "50%" }}>
-      <CardComponent>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "space-between",
-            flexGrow: 1,
-          }}
-        >
-          <MainContentCardHeader
-            icon={icon}
-            title={title}
-            hasDropdown={hasDropdown}
-          />
-          <MainContentCardBody>{content}</MainContentCardBody>
-          
-          <MainContentCardFooter text={text} href={href} hasIcon={hasIcon} />
-        </Box>
+    <GridItem sx={{ flexGrow: 1 }} lg={6} xs={12}>
+      <CardComponent
+        backgroundColor={backgroundColor || null}
+        height={height || null}
+      >
+        {title !== "" && text !== "" ? defaultCard : content}
       </CardComponent>
     </GridItem>
   );
