@@ -53,7 +53,7 @@ const StyledListItem = styled(ListItem)(() => {
 });
 
 const StyledListItemButton = styled(ListItemButton)(({ open }) => ({
-  flexDirection: "row",
+  direction: "row",
   minHeight: 48,
   padding: "2.5 0 2.5 0",
   justifyContent: open ? "initial" : "center",
