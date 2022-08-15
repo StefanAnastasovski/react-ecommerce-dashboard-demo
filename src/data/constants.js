@@ -10,6 +10,9 @@ export const BACKGROUND_LINEAR_GRADIENT_AQUA =
 // text
 export const PRIMARY_COLOR_TEXT = "#103B66";
 export const SECONDARY_COLOR_TEXT = "#233B53";
+export const CARD_DROPDOWN_COLOR_TEXT = "#666666";
+export const CARD_ORDER_BODY_COLOR_TEXT = "#6C7C8C";
+
 
 // font-size
 export const MENU_FONT_SIZE = "14px";

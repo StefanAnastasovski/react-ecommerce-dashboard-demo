@@ -8,7 +8,7 @@ import {
   WELCOME_MESSAGE_FONT_SIZE,
   WHITE_COLOR,
 } from "../../../data/constants";
-import { WELCOME_SECTION_USERNAME } from "../../../data/mainContainerConfig";
+import { WELCOME_SECTION_USERNAME } from "../../../data/dashboardConfig";
 
 import Paragraph from "../../../components/Typography/Paragraph";
 import ExternalLink from "./components/ExternalLink";
