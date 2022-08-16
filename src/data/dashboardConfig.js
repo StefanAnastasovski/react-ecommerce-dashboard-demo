@@ -24,6 +24,8 @@ import TrustpilotBody from "../layout/MainContainer/cards/TrustpilotBody";
 import InviteFriendBody from "../layout/MainContainer/cards/InviteFriendBody";
 import CustomerSupportBody from "../layout/MainContainer/cards/CustomerSupportBody";
 import LinkButton from "../components/ui/Button/LinkButton";
+import CustomSlider from "../layout/MainContainer/Slider";
+import { extensions } from "./extensions";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -46,58 +48,6 @@ export const CARD_DROPDOWN_PERIOD = [
     content: "Last month",
   },
 ];
-
-export const CONFIGURE_YOUR_SHOP_CARD = {
-  header: {
-    icon: "icon",
-    title: "Visitors",
-    hasDropdown: false,
-  },
-  link: {
-    text: "Complete the setup!",
-    href: "/",
-    hasIcon: true,
-  },
-};
-
-export const TRUSTPILOT_CARD = {
-  header: {
-    icon: "icon",
-    title: "Trustpilot",
-    hasDropdown: false,
-  },
-  link: {
-    text: "Write a review on Trustpilot",
-    href: "/",
-    hasIcon: true,
-  },
-};
-
-export const INVITE_FRIEND_CARD = {
-  header: {
-    icon: "icon",
-    title: "Invite friend",
-    hasDropdown: false,
-  },
-  link: {
-    text: "Start inviting friends!",
-    href: "/",
-    hasIcon: true,
-  },
-};
-
-export const CUSTOMER_SUPPORT_CARD = {
-  header: {
-    icon: "icon",
-    title: "Customer support",
-    hasDropdown: false,
-  },
-  link: {
-    text: "",
-    href: "",
-    hasIcon: false,
-  },
-};
 
 export const CARD_DETAILS = [
   {
@@ -191,7 +141,7 @@ export const CARD_DETAILS = [
       hasDropdown: false,
     },
     body: {
-      content: <VisitorCardBody />,
+      content: <CustomSlider data={extensions} />,
     },
     footer: {
       text: "Discover all extensions",
