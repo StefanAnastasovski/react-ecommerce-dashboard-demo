@@ -277,7 +277,7 @@ export const SIDEBAR_CARD_DETAILS = [
       content: <CustomerSupportBody />,
     },
     footer: {
-      text: <LinkButton children={"Contact Us"} />,
+      text: <LinkButton children={"Contact Us"} component="span" />,
       href: "/",
       hasIcon: false,
       style: {},

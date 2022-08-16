@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Link } from "@mui/material";
+import { Box } from "@mui/material";
 
 import {
   FONT_WEIGHT_600,
@@ -9,7 +9,7 @@ import {
   WHITE_COLOR,
 } from "../../../data/constants";
 
-const LinkButton = ({ children, styleProps, ...otherProps }) => {
+const LinkButton = ({ children, component, styleProps, ...otherProps }) => {
   const {
     backgroundColor,
     fontSize,
@@ -22,8 +22,8 @@ const LinkButton = ({ children, styleProps, ...otherProps }) => {
     ...otherStyles
   } = styleProps || {};
   return (
-    <Link
-      component="a"
+    <Box
+      component={component || "a"}
       sx={{
         padding: padding || "15px 52px",
         boxShadow:
@@ -40,7 +40,7 @@ const LinkButton = ({ children, styleProps, ...otherProps }) => {
       {...otherProps}
     >
       {children}
-    </Link>
+    </Box>
   );
 };
 
