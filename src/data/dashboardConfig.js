@@ -4,7 +4,11 @@ import EyeIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import OrderListIcon from "@mui/icons-material/FormatListBulletedOutlined";
 import HeadphonesIcon from "@mui/icons-material/HeadphonesOutlined";
 
-import { CARD_BACKGROUND_COLOR_ORANGE, TRUSTPILOT_BACKGROUND_COLOR } from "./constants";
+import {
+  CARD_BACKGROUND_COLOR_ORANGE,
+  PRIMARY_GREEN_COLOR_ACTIVE,
+  TRUSTPILOT_BACKGROUND_COLOR,
+} from "./constants";
 import APPSTORE_IMG from "../assets/images/app-store.png";
 import GOOGLEPLAY_IMG from "../assets/images/google-play-store.png";
 import MarketPlaceIcon from "../assets/icons/MarketplaceIcon";
@@ -16,6 +20,7 @@ import VisitorCardBody from "../layout/MainContainer/cards/VisitorCardBody";
 import OrderCardBody from "../layout/MainContainer/cards/OrderCardBody";
 import MobileCardBody from "../layout/MainContainer/cards/MobileCardBody";
 import ConfigureYourShopBody from "../layout/MainContainer/cards/ConfigureYourShopBody";
+import TrustpilotBody from "../layout/MainContainer/cards/TrustpilotBody";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -211,6 +216,7 @@ export const SIDEBAR_CARD_DETAILS = [
       text: "Complete the setup!",
       href: "/",
       hasIcon: true,
+      style: {},
     },
     style: {
       height: "auto",
@@ -224,16 +230,17 @@ export const SIDEBAR_CARD_DETAILS = [
       hasDropdown: false,
     },
     body: {
-      content: <VisitorCardBody />,
+      content: <TrustpilotBody />,
     },
     footer: {
       text: "Write a review on Trustpilot",
       href: "/",
       hasIcon: true,
+      style: { color: PRIMARY_GREEN_COLOR_ACTIVE },
     },
     style: {
-      height: null,
-      backgroundColor: TRUSTPILOT_BACKGROUND_COLOR
+      height: "auto",
+      backgroundColor: TRUSTPILOT_BACKGROUND_COLOR,
     },
   },
   {
@@ -250,6 +257,7 @@ export const SIDEBAR_CARD_DETAILS = [
       text: "Start inviting friends!",
       href: "/",
       hasIcon: true,
+      style: {},
     },
     style: {
       height: null,
@@ -269,6 +277,7 @@ export const SIDEBAR_CARD_DETAILS = [
       text: "Contact us!",
       href: "/",
       hasIcon: false,
+      style: {},
     },
     style: {
       height: null,

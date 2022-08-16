@@ -15,7 +15,7 @@ const CardWrapper = ({
   style: {backgroundColor, height, width},
 }) => {
   const { icon, title, hasDropdown } = headerDetails;
-  const { text, href, hasIcon } = footerDetails;
+  const { text, href, hasIcon, style } = footerDetails;
 
   const defaultCard = (
     <Box
@@ -33,7 +33,7 @@ const CardWrapper = ({
       />
       <MainContentCardBody>{content}</MainContentCardBody>
 
-      <MainContentCardFooter text={text} href={href} hasIcon={hasIcon} />
+      <MainContentCardFooter text={text} href={href} hasIcon={hasIcon} color = {(style && style.color) || ""} />
     </Box>
   );
 

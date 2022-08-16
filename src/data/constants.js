@@ -1,7 +1,7 @@
 // active
 export const PRIMARY_COLOR_ACTIVE = "#21B8F9";
 export const PRIMARY_GREEN_COLOR_ACTIVE = "#00C48C";
-export const SECONDARY_GREEN_COLOR_ACTIVE = "##00C48C";
+export const SECONDARY_GREEN_COLOR_ACTIVE = "#00C48C";
 
 // background
 export const PRIMARY_BACKGROUND_COLOR_ACTIVE = "#F7F7F7";
@@ -30,6 +30,7 @@ export const WELCOME_MESSAGE_FONT_SIZE = "34px";
 export const FONT_WEIGHT_400 = "400";
 export const FONT_WEIGHT_500 = "500";
 export const FONT_WEIGHT_600 = "600";
+export const FONT_WEIGHT_700 = "700";
 
 // border
 export const PRIMARY_BORDER_COLOR = "rgba(10, 37, 64, 0.24)";

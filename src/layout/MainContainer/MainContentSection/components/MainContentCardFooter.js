@@ -7,14 +7,24 @@ import { PRIMARY_COLOR_ACTIVE } from "../../../../data/constants";
 
 import ExternalLink from "../../../../components/ExternalLink";
 
-const MainContentCardFooter = ({ children, text, href, hasIcon }) => {
+const MainContentCardFooter = ({ children, text, href, hasIcon, color }) => {
   const footerContent = !children ? (
     <ExternalLink
       href={href}
       target="_blank"
-      sx={{ display: "flex", color: PRIMARY_COLOR_ACTIVE }}
+      sx={{
+        display: "flex",
+        color: color || PRIMARY_COLOR_ACTIVE,
+        textDecorationColor: color || PRIMARY_COLOR_ACTIVE,
+      }}
       text={text}
-      icon={hasIcon && <ArrowRight sx={{ marginLeft: 2.5, fill: PRIMARY_COLOR_ACTIVE }} />}
+      icon={
+        hasIcon && (
+          <ArrowRight
+            sx={{ marginLeft: 2.5, fill: color || PRIMARY_COLOR_ACTIVE }}
+          />
+        )
+      }
     />
   ) : (
     children
