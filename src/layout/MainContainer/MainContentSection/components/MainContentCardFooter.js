@@ -12,7 +12,7 @@ const MainContentCardFooter = ({ children, text, href, hasIcon }) => {
     <ExternalLink
       href={href}
       target="_blank"
-      sx={{ display: "flex" }}
+      sx={{ display: "flex", color: PRIMARY_COLOR_ACTIVE }}
       text={text}
       icon={hasIcon && <ArrowRight sx={{ marginLeft: 2.5, fill: PRIMARY_COLOR_ACTIVE }} />}
     />
