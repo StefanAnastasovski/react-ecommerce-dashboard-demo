@@ -22,6 +22,8 @@ import MobileCardBody from "../layout/MainContainer/cards/MobileCardBody";
 import ConfigureYourShopBody from "../layout/MainContainer/cards/ConfigureYourShopBody";
 import TrustpilotBody from "../layout/MainContainer/cards/TrustpilotBody";
 import InviteFriendBody from "../layout/MainContainer/cards/InviteFriendBody";
+import CustomerSupportBody from "../layout/MainContainer/cards/CustomerSupportBody";
+import LinkButton from "../components/ui/Button/LinkButton";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -272,16 +274,16 @@ export const SIDEBAR_CARD_DETAILS = [
       hasDropdown: false,
     },
     body: {
-      content: <VisitorCardBody />,
+      content: <CustomerSupportBody />,
     },
     footer: {
-      text: "Contact us!",
+      text: <LinkButton children={"Contact Us"} />,
       href: "/",
       hasIcon: false,
       style: {},
     },
     style: {
-      height: null,
+      height: "auto",
     },
   },
 ];
@@ -296,5 +298,8 @@ export const DASHBOARD_API = {
   },
   configure_your_shop: {
     completed: 45,
+  },
+  cs_agent: {
+    name: "Natalie",
   },
 };
