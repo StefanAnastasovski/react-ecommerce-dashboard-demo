@@ -6,6 +6,7 @@ import WelcomeSection from "./WelcomeSection";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem";
 import MainContentSection from "./MainContentSection";
+import SidebarSection from "./SidebarSection";
 
 const MainContainer = () => {
   return (
@@ -19,6 +20,7 @@ const MainContainer = () => {
 
         {/* Sidebar*/}
         <GridItem xs={4}>
+          <SidebarSection />
         </GridItem>
       </GridContainer>
     </Box>
