@@ -1,16 +1,21 @@
 import React from "react";
 
 import EyeIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import OrderList from "@mui/icons-material/FormatListBulletedOutlined";
+import OrderListIcon from "@mui/icons-material/FormatListBulletedOutlined";
+import HeadphonesIcon from "@mui/icons-material/HeadphonesOutlined";
 
-import { CARD_BACKGROUND_COLOR_ORANGE } from "./constants";
+import { CARD_BACKGROUND_COLOR_ORANGE, TRUSTPILOT_BACKGROUND_COLOR } from "./constants";
 import APPSTORE_IMG from "../assets/images/app-store.png";
 import GOOGLEPLAY_IMG from "../assets/images/google-play-store.png";
 import MarketPlaceIcon from "../assets/icons/MarketplaceIcon";
+import TrustpilotIcon from "../assets/icons/TrustpilotIcon";
+import UsersIcon from "../assets/icons/UsersIcon";
+import ConfigureIcon from "../assets/icons/ConfigureIcon";
 
 import VisitorCardBody from "../layout/MainContainer/cards/VisitorCardBody";
 import OrderCardBody from "../layout/MainContainer/cards/OrderCardBody";
 import MobileCardBody from "../layout/MainContainer/cards/MobileCardBody";
+import ConfigureYourShopBody from "../layout/MainContainer/cards/ConfigureYourShopBody";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -110,7 +115,7 @@ export const CARD_DETAILS = [
   {
     id: "cd2",
     header: {
-      icon: <OrderList />,
+      icon: <OrderListIcon />,
       title: "Orders",
       hasDropdown: true,
     },
@@ -191,6 +196,86 @@ export const CARD_DETAILS = [
   },
 ];
 
+export const SIDEBAR_CARD_DETAILS = [
+  {
+    id: "sbcd1",
+    header: {
+      icon: <ConfigureIcon />,
+      title: "Configure Your Shop",
+      hasDropdown: false,
+    },
+    body: {
+      content: <ConfigureYourShopBody />,
+    },
+    footer: {
+      text: "Complete the setup!",
+      href: "/",
+      hasIcon: true,
+    },
+    style: {
+      height: "auto",
+    },
+  },
+  {
+    id: "sbcd2",
+    header: {
+      icon: <TrustpilotIcon />,
+      title: " ",
+      hasDropdown: false,
+    },
+    body: {
+      content: <VisitorCardBody />,
+    },
+    footer: {
+      text: "Write a review on Trustpilot",
+      href: "/",
+      hasIcon: true,
+    },
+    style: {
+      height: null,
+      backgroundColor: TRUSTPILOT_BACKGROUND_COLOR
+    },
+  },
+  {
+    id: "sbcd3",
+    header: {
+      icon: <UsersIcon />,
+      title: "Invite Friends",
+      hasDropdown: false,
+    },
+    body: {
+      content: <VisitorCardBody />,
+    },
+    footer: {
+      text: "Start inviting friends!",
+      href: "/",
+      hasIcon: true,
+    },
+    style: {
+      height: null,
+    },
+  },
+  {
+    id: "sbcd4",
+    header: {
+      icon: <HeadphonesIcon />,
+      title: "Customer Support",
+      hasDropdown: false,
+    },
+    body: {
+      content: <VisitorCardBody />,
+    },
+    footer: {
+      text: "Contact us!",
+      href: "/",
+      hasIcon: false,
+    },
+    style: {
+      height: null,
+    },
+  },
+];
+
 export const DASHBOARD_API = {
   visitors: {
     data: 1824,
@@ -198,5 +283,8 @@ export const DASHBOARD_API = {
   orders: {
     orders_received: 156,
     earnings: 1893.24,
+  },
+  configure_your_shop: {
+    completed: 45,
   },
 };
