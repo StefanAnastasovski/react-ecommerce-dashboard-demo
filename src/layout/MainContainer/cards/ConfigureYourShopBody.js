@@ -28,7 +28,7 @@ const ConfigureYourShopBody = () => {
     fontSize: HEADER_BUTTON_FONT_SIZE,
     fontWeight: FONT_WEIGHT_500,
     display: "block",
-    marginTop: "-1",
+    marginTop: -1.5,
   };
 
   const {
@@ -42,9 +42,8 @@ const ConfigureYourShopBody = () => {
 
   return (
     <>
-      {/* #FFA26B */}
       <Paragraph {...styledCompleted}>
-        {completed}%{" "}
+        {completed}%
         <Box component="span" {...styledText}>
           Completed
         </Box>
