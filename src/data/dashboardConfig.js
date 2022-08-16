@@ -21,6 +21,7 @@ import OrderCardBody from "../layout/MainContainer/cards/OrderCardBody";
 import MobileCardBody from "../layout/MainContainer/cards/MobileCardBody";
 import ConfigureYourShopBody from "../layout/MainContainer/cards/ConfigureYourShopBody";
 import TrustpilotBody from "../layout/MainContainer/cards/TrustpilotBody";
+import InviteFriendBody from "../layout/MainContainer/cards/InviteFriendBody";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -251,7 +252,7 @@ export const SIDEBAR_CARD_DETAILS = [
       hasDropdown: false,
     },
     body: {
-      content: <VisitorCardBody />,
+      content: <InviteFriendBody />,
     },
     footer: {
       text: "Start inviting friends!",
@@ -260,7 +261,7 @@ export const SIDEBAR_CARD_DETAILS = [
       style: {},
     },
     style: {
-      height: null,
+      height: "auto",
     },
   },
   {
