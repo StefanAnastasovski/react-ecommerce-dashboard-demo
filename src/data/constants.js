@@ -32,6 +32,9 @@ export const FONT_WEIGHT_500 = "500";
 export const FONT_WEIGHT_600 = "600";
 export const FONT_WEIGHT_700 = "700";
 
+// line-height
+export const LINE_HEIGHT_MOBILE_CARD = "27px"
+
 // border
 export const PRIMARY_BORDER_COLOR = "rgba(10, 37, 64, 0.24)";
 

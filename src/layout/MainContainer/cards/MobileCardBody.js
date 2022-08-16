@@ -5,6 +5,7 @@ import ArrowRight from "@mui/icons-material/ArrowForwardOutlined";
 import {
   CARD_TITLE_FONT_SIZE_2,
   FONT_WEIGHT_500,
+  LINE_HEIGHT_MOBILE_CARD,
   LINK_N_TEXT_FONT_SIZE,
   WHITE_COLOR,
 } from "../../../data/constants";
@@ -27,6 +28,7 @@ const MobileCardBody = ({
       fontSize: CARD_TITLE_FONT_SIZE_2,
       fontWeight: FONT_WEIGHT_500,
       color: WHITE_COLOR,
+      lineHeight: LINE_HEIGHT_MOBILE_CARD,
     },
   };
   const styledExternalLink = {
