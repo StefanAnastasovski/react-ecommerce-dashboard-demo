@@ -1,7 +1,17 @@
 import React from "react";
 
-const Image = ({ source, alt }) => {
-  return <img src={source} alt={alt} />;
+import { CardMedia } from "@mui/material";
+
+const Image = ({ source, alt, width, ...otherProps }) => {
+  return (
+    <CardMedia
+      component="img"
+      src={source}
+      title={alt}
+      sx={{ width: width || "unset" }}
+      {...otherProps}
+    />
+  );
 };
 
 export default Image;
