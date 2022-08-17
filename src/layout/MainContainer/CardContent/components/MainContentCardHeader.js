@@ -4,10 +4,10 @@ import { Box } from "@mui/material";
 
 import Paragraph from "../../../../components/Typography/Paragraph";
 import {
-  CARD_DROPDOWN_COLOR_TEXT,
   CARD_TITLE_FONT_SIZE_1,
   FONT_WEIGHT_500,
 } from "../../../../data/constants";
+import CardHeaderDropdown from "./CardHeaderDropdown";
 
 const MainContentCardHeader = ({ icon, title, hasDropdown }) => {
   const containerStyle = {
@@ -15,7 +15,7 @@ const MainContentCardHeader = ({ icon, title, hasDropdown }) => {
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-between",
-      flexWrap: "wrap"
+      flexWrap: "wrap",
     },
   };
   const titleStyle = {
@@ -26,16 +26,13 @@ const MainContentCardHeader = ({ icon, title, hasDropdown }) => {
     },
   };
   return (
-    <Box {...containerStyle}
-    >
+    <Box {...containerStyle}>
       <Box sx={{ display: "flex", alignItems: "center" }}>
         {icon}
         <Paragraph {...titleStyle}>{title}</Paragraph>
       </Box>
 
-      {hasDropdown && (
-        <Paragraph sx={{ color: CARD_DROPDOWN_COLOR_TEXT }}>Dropdown</Paragraph>
-      )}
+      {hasDropdown && <CardHeaderDropdown />}
     </Box>
   );
 };

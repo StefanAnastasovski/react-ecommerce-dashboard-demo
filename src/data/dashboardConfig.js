@@ -33,19 +33,19 @@ export const WELCOME_SECTION_USERNAME = "Mario";
 export const CARD_DROPDOWN_PERIOD = [
   {
     id: "vc1",
-    content: "This month",
+    title: "This month",
   },
   {
     id: "vc2",
-    content: "This week",
+    title: "This week",
   },
   {
     id: "vc3",
-    content: "Today",
+    title: "Today",
   },
   {
     id: "vc4",
-    content: "Last month",
+    title: "Last month",
   },
 ];
 
