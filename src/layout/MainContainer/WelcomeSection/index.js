@@ -1,11 +1,15 @@
 import React from "react";
 
 import Box from "@mui/material/Box";
+import LaunchIcon from "@mui/icons-material/Launch";
 
 import {
   BACKGROUND_LINEAR_GRADIENT_AQUA,
+  FONT_WEIGHT_500,
   FONT_WEIGHT_600,
+  LINK_N_TEXT_FONT_SIZE,
   WELCOME_MESSAGE_FONT_SIZE,
+  WELCOME_SECTION_PATH,
   WHITE_COLOR,
 } from "../../../data/constants";
 import { WELCOME_SECTION_USERNAME } from "../../../data/dashboardConfig";
@@ -39,7 +43,26 @@ const WelcomeSection = () => {
         Welcome {WELCOME_SECTION_USERNAME}!
       </Paragraph>
 
-      <ExternalLink />
+      <ExternalLink
+        href={`https://${WELCOME_SECTION_PATH}`}
+        styleProps={{
+          fontSize: LINK_N_TEXT_FONT_SIZE,
+          fontWeight: FONT_WEIGHT_500,
+          color: WHITE_COLOR,
+          textDecorationColor: WHITE_COLOR,
+        }}
+        text={WELCOME_SECTION_PATH}
+        icon={
+          <LaunchIcon
+            sx={{
+              width: "24px",
+              height: "24px",
+              ml: 1.8,
+              fill: WHITE_COLOR,
+            }}
+          />
+        }
+      />
     </Box>
   );
 };
