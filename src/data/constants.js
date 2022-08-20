@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 // active
 export const PRIMARY_COLOR_ACTIVE = "#21B8F9";
 export const PRIMARY_GREEN_COLOR_ACTIVE = "#00C48C";
@@ -33,7 +35,7 @@ export const FONT_WEIGHT_600 = "600";
 export const FONT_WEIGHT_700 = "700";
 
 // line-height
-export const LINE_HEIGHT_MOBILE_CARD = "27px"
+export const LINE_HEIGHT_MOBILE_CARD = "27px";
 
 // border
 export const PRIMARY_BORDER_COLOR = "rgba(10, 37, 64, 0.24)";
@@ -45,3 +47,5 @@ export const PRIMARY_RED_COLOR = "#F33451";
 // Destinations
 export const HOME_PAGE_PATH = "/";
 export const WELCOME_SECTION_PATH = "app.vetrinalive.it/fenoh-store";
+
+export const API_URL = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${process.env.REACT_APP_API_KEY}`;
