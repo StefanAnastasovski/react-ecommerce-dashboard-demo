@@ -12,7 +12,6 @@ const ExternalLink = ({
   styleProps,
   ...otherProps
 }) => {
-  console.log(otherProps);
   const content = !children ? (
     <>
       {text}
