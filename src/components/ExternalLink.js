@@ -2,6 +2,8 @@ import React from "react";
 
 import { Link } from "@mui/material";
 
+import { PRIMARY_COLOR_ACTIVE } from "../data/constants";
+
 const ExternalLink = ({
   children,
   text,
@@ -28,8 +30,10 @@ const ExternalLink = ({
       display: "flex",
       fontSize: fontSize && fontSize,
       fontWeight: fontWeight && fontWeight,
-      color: color && color,
-      textDecorationColor: textDecorationColor && textDecorationColor,
+      color: color ? color : PRIMARY_COLOR_ACTIVE,
+      textDecorationColor: textDecorationColor
+        ? textDecorationColor
+        : PRIMARY_COLOR_ACTIVE,
       ...otherStyle,
     },
   };

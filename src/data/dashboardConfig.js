@@ -3,6 +3,7 @@ import React from "react";
 import EyeIcon from "@mui/icons-material/RemoveRedEyeOutlined";
 import OrderListIcon from "@mui/icons-material/FormatListBulletedOutlined";
 import HeadphonesIcon from "@mui/icons-material/HeadphonesOutlined";
+import NewsIcon from "@mui/icons-material/DescriptionOutlined";
 
 import {
   CARD_BACKGROUND_COLOR_ORANGE,
@@ -26,6 +27,9 @@ import CustomerSupportBody from "../layout/MainContainer/cards/CustomerSupportBo
 import LinkButton from "../components/ui/Button/LinkButton";
 import CustomSlider from "../layout/MainContainer/Slider";
 import { extensions } from "./extensions";
+import NewsBody from "../layout/MainContainer/cards/NewsBody";
+import ExternalLink from "../components/ExternalLink";
+import LaunchLinkIcon from "../assets/icons/LaunchLinkIcon";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -48,7 +52,7 @@ export const CARD_DROPDOWN_PERIOD = [
     title: "Last month",
   },
 ];
-
+// Post
 export const CARD_DETAILS = [
   {
     id: "cd1",
@@ -150,6 +154,33 @@ export const CARD_DETAILS = [
     },
     style: {
       height: "343px",
+    },
+  },
+  {
+    id: "cd5",
+    header: {
+      icon: <NewsIcon />,
+      title: "Latest news",
+      hasDropdown: false,
+      hasRightElement: true,
+      rightCardHeaderElement: (
+        <ExternalLink
+          href={"https://newsapi.org/"}
+          text={"Visit our blog"}
+          icon={<LaunchLinkIcon />}
+        />
+      ),
+    },
+    body: {
+      content: <NewsBody />,
+    },
+    footer: {
+      text: "",
+      href: "",
+      hasIcon: false,
+    },
+    style: {
+      height: "auto",
     },
   },
 ];
