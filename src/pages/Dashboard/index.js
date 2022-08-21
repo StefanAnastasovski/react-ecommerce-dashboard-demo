@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 
 import { Header, MainContainer, SideMenu } from "../../layout";
+import DashboardMainSection from "../../features/DashboardMainSection";
 
 const Dashboard = () => {
   return (
@@ -13,7 +14,7 @@ const Dashboard = () => {
 
       <SideMenu />
 
-      <MainContainer />
+      <MainContainer page={<DashboardMainSection />} />
     </Box>
   );
 };
