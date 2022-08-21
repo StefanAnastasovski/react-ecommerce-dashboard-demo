@@ -1,14 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { dropdownMenuItems, primaryMenuItems } from "../../data/sidebarData";
+import {
+  dropdownMenuItems,
+  primaryMenuItems,
+  secondaryMenuItems,
+} from "../data/sidebarData";
 
 const initialState = {
-  DRAWER_WIDTH: 255,
   isDrawerOpened: true,
   selectedMenuItemId: {
     id: primaryMenuItems[0].id,
     subId: "",
   },
+  selectedMenuItemTitle: primaryMenuItems[0].title,
   selectedDropdownItem: dropdownMenuItems[0].title,
   isExpanded: {},
 };
@@ -28,6 +32,12 @@ const drawerSlice = createSlice({
         id: id,
         subId: subId ? subId : "",
       };
+      state.selectedMenuItemTitle = [
+        ...primaryMenuItems,
+        ...secondaryMenuItems,
+      ].find((item) => {
+        return item.id === id;
+      }).title;
     },
     setSelectedDropdownItem: (state, { payload: { title } }) => {
       state.selectedDropdownItem = title;
@@ -45,9 +55,5 @@ const drawerSlice = createSlice({
 
 export const drawerReducer = drawerSlice.reducer;
 export const drawerActions = drawerSlice.actions;
-
-export const getDrawerWidth = () => {
-  return drawerSlice.getInitialState().DRAWER_WIDTH;
-};
 
 export default drawerSlice;

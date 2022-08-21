@@ -15,7 +15,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
 import ShareIcon from "@mui/icons-material/Share";
 import RemoveRedEyeOutlinedIcon from "@mui/icons-material/RemoveRedEyeOutlined";
-import TargetIcon from "../assets/icons/TargetIcon";
+import TargetIcon from "../../../assets/icons/TargetIcon";
 
 export const primaryMenuItems = [
   {

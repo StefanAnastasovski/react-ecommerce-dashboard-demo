@@ -3,9 +3,9 @@ import React from "react";
 import { FormControl } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
-import { dropdownMenuItems } from "../../../../data/sidebarData";
-import { drawerActions } from "../../../../store/slices/drawerSlice";
-import SelectDropdown from "../../../../components/ui/Select/SelectDropdown";
+import { dropdownMenuItems } from "../../../data/sidebarData";
+import { drawerActions } from "../../../slices/drawerSlice";
+import SelectDropdown from "../../../../../components/ui/Select/SelectDropdown";
 
 const DrawerDropdown = () => {
   const open = useSelector((state) => state.drawer.isDrawerOpened);

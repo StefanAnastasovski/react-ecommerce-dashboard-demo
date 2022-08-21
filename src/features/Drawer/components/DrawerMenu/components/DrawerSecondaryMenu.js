@@ -2,7 +2,7 @@ import React from "react";
 
 import { List } from "@mui/material";
 
-import { secondaryMenuItems } from "../../../../data/sidebarData";
+import { secondaryMenuItems } from "../../../data/sidebarData";
 
 import DrawerItem from "./DrawerItem";
 

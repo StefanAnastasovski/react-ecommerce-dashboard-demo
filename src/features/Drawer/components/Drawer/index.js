@@ -1,16 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 import { styled } from "@mui/material/styles";
 import MuiDrawer from "@mui/material/Drawer";
 
-import { useSelector } from "react-redux";
-import { getDrawerWidth } from "../../../store/slices/drawerSlice";
-
-const DRAWER_WIDTH = getDrawerWidth();
+import { DRAWER_WIDTH } from "../../../../data/constants";
 
 const openedMixin = (theme) => {
   return {
-    width: DRAWER_WIDTH,
+    width: `${DRAWER_WIDTH}px`,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -38,7 +36,7 @@ const DrawerComponent = styled(MuiDrawer, {
 })(({ theme, open }) => {
   if (!open) open = useSelector((state) => state.drawer.isDrawerOpened);
   return {
-    width: DRAWER_WIDTH,
+    width: `${DRAWER_WIDTH}px`,
     flexShrink: 0,
     whiteSpace: "nowrap",
     boxSizing: "border-box",

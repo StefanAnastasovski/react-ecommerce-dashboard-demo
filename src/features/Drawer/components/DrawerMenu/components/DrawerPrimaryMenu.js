@@ -2,10 +2,10 @@ import React from "react";
 
 import { List } from "@mui/material";
 
-import { primaryMenuItems } from "../../../../data/sidebarData";
+import { primaryMenuItems } from "../../../data/sidebarData";
 
 import DrawerItem from "./DrawerItem";
-import { orders } from "../../../../data/orders";
+import { orders } from "../../../../../data/orders";
 
 const DrawerPrimaryMenu = () => {
   const menuItems = primaryMenuItems.map((item) => {

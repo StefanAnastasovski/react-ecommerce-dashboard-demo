@@ -57,9 +57,9 @@ export const PRIMARY_RED_COLOR = "#F33451";
 export const HOME_PAGE_PATH = "/";
 export const WELCOME_SECTION_PATH = "app.vetrinalive.it/fenoh-store";
 
-// export const API_URL = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${process.env.REACT_APP_API_KEY}`;
-// export const API_URL = `https://newsapi.org/v2/everything?q=bitcoin&pageSize=9&apiKey=${process.env.REACT_APP_API_KEY}`;
 export const API_BASE_URL = "https://newsapi.org/v2/everything";
 export const API_KEY = `apiKey=${process.env.REACT_APP_API_KEY}`;
 
-// pageSize
+// constants
+// -- Header
+export const DRAWER_WIDTH = "255" //px;

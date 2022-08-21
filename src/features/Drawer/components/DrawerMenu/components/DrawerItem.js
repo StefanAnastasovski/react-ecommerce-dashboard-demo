@@ -19,9 +19,9 @@ import {
   PRIMARY_COLOR_ACTIVE,
   SECONDARY_BACKGROUND_COLOR_ACTIVE,
   SECONDARY_COLOR_TEXT,
-} from "../../../../data/constants";
-import { drawerActions } from "../../../../store/slices/drawerSlice";
-import NotificationEllipse from "../../../../components/NotificationEllipse";
+} from "../../../../../data/constants";
+import { drawerActions } from "../../../slices/drawerSlice";
+import NotificationEllipse from "../../../../../components/NotificationEllipse";
 
 const StyledListItem = styled(ListItem)(() => {
   return {

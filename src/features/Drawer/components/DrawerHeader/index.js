@@ -5,14 +5,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
-import { drawerActions } from "../../../store/slices/drawerSlice";
-import LogoImg from "../../../assets/images/logo/vetrinalive-logo.png";
-import { HOME_PAGE_PATH } from "../../../data/constants";
+import { drawerActions } from "../../slices/drawerSlice";
+import LogoImg from "../../../../assets/images/logo/vetrinalive-logo.png";
+import { HOME_PAGE_PATH } from "../../../../data/constants";
 
-import GridItem from "../../../components/Grid/GridItem";
-import StyledIconButton from "../../../components/ui/Button/StyledIconButton";
-import Image from "../../../components/Image";
-import GridContainerHeader from "../../../components/Grid/GridContainerHeader";
+import GridItem from "../../../../components/Grid/GridItem";
+import StyledIconButton from "../../../../components/ui/Button/StyledIconButton";
+import Image from "../../../../components/Image";
+import GridContainer from "../../../../components/Grid/GridContainer";
 
 const DrawerHeaderComponent = styled("div")(({ theme }) => ({
   display: "flex",
@@ -34,7 +34,14 @@ const DrawerHeader = () => {
   return (
     <DrawerHeaderComponent>
       {open && (
-        <GridContainerHeader>
+        <GridContainer
+          sx={{
+            direction: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            m: 2,
+          }}
+        >
           <GridItem>
             <Link href={HOME_PAGE_PATH}>
               <Image source={LogoImg} alt="Vetrinalive Logo" />
@@ -48,7 +55,7 @@ const DrawerHeader = () => {
               <MenuIcon />
             </StyledIconButton>
           </GridItem>
-        </GridContainerHeader>
+        </GridContainer>
       )}
     </DrawerHeaderComponent>
   );
