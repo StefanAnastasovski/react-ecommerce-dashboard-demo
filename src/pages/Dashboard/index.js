@@ -3,9 +3,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import CssBaseline from "@mui/material/CssBaseline";
 
-import Header from "../../layout/Header";
-import MainContainer from "../../layout/MainContainer/";
-import SideMenu from "../../layout/SideMenu";
+import { Header, MainContainer, SideMenu } from "../../layout";
 
 const Dashboard = () => {
   return (

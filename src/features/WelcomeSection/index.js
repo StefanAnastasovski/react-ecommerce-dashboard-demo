@@ -10,12 +10,12 @@ import {
   WELCOME_MESSAGE_FONT_SIZE,
   WELCOME_SECTION_PATH,
   WHITE_COLOR,
-} from "../../../data/constants";
-import { WELCOME_SECTION_USERNAME } from "../../../data/dashboardConfig";
+} from "../../data/constants";
+import { WELCOME_SECTION_USERNAME } from "../../data/dashboardConfig";
 
-import Paragraph from "../../../components/Typography/Paragraph";
-import LaunchLinkIcon from "../../../assets/icons/LaunchLinkIcon";
-import ExternalLink from "../../../components/ExternalLink";
+import Paragraph from "../../components/Typography/Paragraph";
+import LaunchLinkIcon from "../../assets/icons/LaunchLinkIcon";
+import ExternalLink from "../../components/ExternalLink";
 
 const WelcomeSection = () => {
   const welcomeMessageStyle = {

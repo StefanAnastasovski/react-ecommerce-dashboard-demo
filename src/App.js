@@ -1,8 +1,9 @@
 import React from "react";
-import MainLayout from "./layout/MainLayout";
+
+import Dashboard from "./pages/Dashboard";
 
 const App = () => {
-  return <MainLayout />;
+  return <Dashboard />;
 };
 
 export default App;
