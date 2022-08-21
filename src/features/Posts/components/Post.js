@@ -18,9 +18,9 @@ import { getDateFromString } from "../../../utils/getDateFromString";
 import ExternalLink from "../../../components/ExternalLink";
 import GridItem from "../../../components/Grid/GridItem";
 import Image from "../../../components/Image";
-import CardWrapper from "../../../layout/MainContainer/CardContent/components/CardWrapper";
 import { formatAuthorText } from "../utils/formatAuthorText";
 import { formatTitleText } from "../utils/formatTitleText";
+import CardDashboardWrapper from "../../../components/CardDashboard/CardDashboardWrapper";
 
 const Post = ({ postDetails, direction, ...otherProps }) => {
   const { author, title, urlToImage, url, source, publishedAt } =
@@ -31,17 +31,17 @@ const Post = ({ postDetails, direction, ...otherProps }) => {
 
   const footerText = (
     <Paragraph
-        fontSize= {POST_CARD_FOOTER_FONT_SIZE}
-        fontWeight={ FONT_WEIGHT_300}
-        lineHeight= {LINE_HEIGHT_POST_CARD_FOOTER}
-        color= {PRIMARY_COLOR_TEXT}
-        textDecoration = {"underline"}
+      fontSize={POST_CARD_FOOTER_FONT_SIZE}
+      fontWeight={FONT_WEIGHT_300}
+      lineHeight={LINE_HEIGHT_POST_CARD_FOOTER}
+      color={PRIMARY_COLOR_TEXT}
+      textDecoration={"underline"}
     >
       {`${formatedAuthor} | ${getDateFromString(publishedAt)}`}
     </Paragraph>
   );
 
-  const cardWrapperStyle = {
+  const cardDashboardWrapperStyle = {
     height: "100px",
     minWidth: "100%",
     boxShadow: "none",
@@ -95,7 +95,7 @@ const Post = ({ postDetails, direction, ...otherProps }) => {
           height={"100px"}
         />
         {/* post right side - content */}
-        <CardWrapper
+        <CardDashboardWrapper
           headerDetails={{
             title: source,
             ...headerStyle,
@@ -105,7 +105,7 @@ const Post = ({ postDetails, direction, ...otherProps }) => {
             children: footerText,
             ...footerStyle,
           }}
-          style={cardWrapperStyle}
+          style={cardDashboardWrapperStyle}
           isLastCard={true}
         />
       </ExternalLink>

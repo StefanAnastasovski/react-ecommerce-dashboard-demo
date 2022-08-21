@@ -5,7 +5,7 @@ import { List } from "@mui/material";
 import { primaryMenuItems } from "../../../data/sidebarData";
 
 import DrawerItem from "./DrawerItem";
-import { orders } from "../../../../../data/orders";
+import { orders } from "../../../data/orders";
 
 const DrawerPrimaryMenu = () => {
   const menuItems = primaryMenuItems.map((item) => {
@@ -17,7 +17,12 @@ const DrawerPrimaryMenu = () => {
       return <DrawerItem key={id} data={item} />;
     }
     return (
-      <DrawerItem key={item.id} data={item} orders={hasNews && orders} styleProps={{}} />
+      <DrawerItem
+        key={item.id}
+        data={item}
+        orders={hasNews && orders}
+        styleProps={{}}
+      />
     );
   });
 

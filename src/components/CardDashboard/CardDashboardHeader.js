@@ -2,12 +2,12 @@ import React from "react";
 
 import { Box } from "@mui/material";
 
-import Paragraph from "../../../../components/Typography/Paragraph";
+import Paragraph from "../Typography/Paragraph";
 import {
   CARD_TITLE_FONT_SIZE_1,
   FONT_WEIGHT_500,
-} from "../../../../data/constants";
-import CardHeaderDropdown from "./CardHeaderDropdown";
+} from "../../data/constants";
+import CardDashboardHeaderDropdown from "./CardDashboardHeaderDropdown";
 
 const MainContentCardHeader = ({
   icon,
@@ -41,7 +41,7 @@ const MainContentCardHeader = ({
         <Paragraph {...titleStyle}>{title}</Paragraph>
       </Box>
 
-      {hasDropdown && <CardHeaderDropdown />}
+      {hasDropdown && <CardDashboardHeaderDropdown />}
       {hasRightElement && rightCardHeaderElement}
     </Box>
   );

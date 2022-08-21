@@ -7,7 +7,7 @@ import { CARD_DETAILS, SIDEBAR_CARD_DETAILS } from "../../data/dashboardConfig";
 import WelcomeSection from "../../features/WelcomeSection";
 import GridContainer from "../../components/Grid/GridContainer";
 import GridItem from "../../components/Grid/GridItem";
-import CardContent from "./CardContent";
+import CardContent from "../../features/DashboardCardContent";
 
 const MainContainer = () => {
   const cardContentStyle = {

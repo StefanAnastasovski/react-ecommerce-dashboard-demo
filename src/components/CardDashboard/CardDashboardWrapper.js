@@ -2,13 +2,13 @@ import React from "react";
 
 import { Box } from "@mui/material";
 
-import GridItem from "../../../../components/Grid/GridItem";
-import CardComponent from "../../../../components/ui/Card/Card";
-import MainContentCardHeader from "./MainContentCardHeader";
-import MainContentCardFooter from "./MainContentCardFooter";
-import MainContentCardBody from "./MainContentCardBody";
+import GridItem from "../Grid/GridItem";
+import CardComponent from "../ui/Card/Card";
+import CardDashboardHeader from "./CardDashboardHeader";
+import CardDashboardFooter from "./CardDashboardFooter";
+import CardDashboardBody from "./CardDashboardBody";
 
-const CardWrapper = ({
+const CardDashboardWrapper = ({
   headerDetails,
   bodyDetails: { content },
   footerDetails,
@@ -26,10 +26,10 @@ const CardWrapper = ({
         flexGrow: 1,
       }}
     >
-      <MainContentCardHeader {...headerDetails} />
-      <MainContentCardBody>{content}</MainContentCardBody>
+      <CardDashboardHeader {...headerDetails} />
+      <CardDashboardBody>{content}</CardDashboardBody>
 
-      <MainContentCardFooter
+      <CardDashboardFooter
         text={text}
         href={href}
         hasIcon={hasIcon}
@@ -57,4 +57,4 @@ const CardWrapper = ({
   );
 };
 
-export default CardWrapper;
+export default CardDashboardWrapper;

@@ -3,9 +3,8 @@ import React from "react";
 import { Box } from "@mui/material";
 import ArrowRight from "@mui/icons-material/ArrowForwardOutlined";
 
-import { PRIMARY_COLOR_ACTIVE } from "../../../../data/constants";
-
-import ExternalLink from "../../../../components/ExternalLink";
+import { PRIMARY_COLOR_ACTIVE } from "../../data/constants";
+import ExternalLink from "../ExternalLink";
 
 const MainContentCardFooter = ({
   children,

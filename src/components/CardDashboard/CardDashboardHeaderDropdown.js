@@ -2,15 +2,15 @@ import React, { useState } from "react";
 
 import { FormControl } from "@mui/material";
 
-import { CARD_DROPDOWN_PERIOD } from "../../../../data/dashboardConfig";
+import { CARD_DROPDOWN_PERIOD } from "../../data/dashboardConfig";
 
-import SelectDropdown from "../../../../components/ui/Select/SelectDropdown";
+import SelectDropdown from "../ui/Select/SelectDropdown";
 import {
   CARD_DROPDOWN_COLOR_TEXT,
   MENU_FONT_SIZE,
-} from "../../../../data/constants";
+} from "../../data/constants";
 
-const CardHeaderDropdown = () => {
+const CardDashboardHeaderDropdown = () => {
   const [dropdownItem, setDropdownItem] = useState(
     CARD_DROPDOWN_PERIOD[0].title
   );
@@ -45,4 +45,4 @@ const CardHeaderDropdown = () => {
   );
 };
 
-export default CardHeaderDropdown;
+export default CardDashboardHeaderDropdown;

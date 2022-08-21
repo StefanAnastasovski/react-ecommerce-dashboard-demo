@@ -1,13 +1,13 @@
 import React from "react";
 
-import GridContainer from "../../../components/Grid/GridContainer";
-import CardWrapper from "./components/CardWrapper";
+import GridContainer from "../../components/Grid/GridContainer";
+import CardDashboardWrapper from "../../components/CardDashboard/CardDashboardWrapper";
 
-const MainContentSection = ({ cardDetails, direction, ...otherProps }) => {
+const DashboardCardContent = ({ cardDetails, direction, ...otherProps }) => {
   const content = cardDetails.map(({ id, ...otherDetails }, index) => {
     const { header, body, footer, style } = otherDetails;
     return (
-      <CardWrapper
+      <CardDashboardWrapper
         key={id}
         isLastCard={cardDetails.length - 1 === index}
         headerDetails={header}
@@ -25,4 +25,4 @@ const MainContentSection = ({ cardDetails, direction, ...otherProps }) => {
   );
 };
 
-export default MainContentSection;
+export default DashboardCardContent;
