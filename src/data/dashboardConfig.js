@@ -27,9 +27,9 @@ import CustomerSupportBody from "../layout/MainContainer/cards/CustomerSupportBo
 import LinkButton from "../components/ui/Button/LinkButton";
 import CustomSlider from "../layout/MainContainer/Slider";
 import { extensions } from "./extensions";
-import NewsBody from "../layout/MainContainer/cards/NewsBody";
 import ExternalLink from "../components/ExternalLink";
 import LaunchLinkIcon from "../assets/icons/LaunchLinkIcon";
+import Posts from "../features/Posts";
 
 export const WELCOME_SECTION_USERNAME = "Mario";
 
@@ -172,7 +172,7 @@ export const CARD_DETAILS = [
       ),
     },
     body: {
-      content: <NewsBody />,
+      content: <Posts />,
     },
     footer: {
       text: "",
