@@ -29,10 +29,12 @@ const SelectDropdown = ({
 
   const { labelId, labelText, style: labelStyle } = labelContent || {};
 
-  const StyledSelect = styled(Select)(({ hasOutline }) => ({
+  const StyledSelect = styled(Select, {
+    shouldForwardProp: (props) => props !== "hasOutline",
+  })(({ hasOutline }) => ({
     "& .MuiOutlinedInput-notchedOutline": {
-      border: !hasOutline && "none !important",
-      outline: !hasOutline && "none !important",
+      border: !hasOutline && "none ",
+      outline: !hasOutline && "none ",
     },
     "& .MuiSvgIcon-root": {
       fill: color,

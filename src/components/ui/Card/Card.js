@@ -8,6 +8,7 @@ const CardComponent = ({
   children,
   backgroundColor,
   height,
+  otherStyle,
   ...otherProps
 }) => {
   const styledCard = {
@@ -22,6 +23,7 @@ const CardComponent = ({
       minWidth: "349px",
       height: height || "220px",
       padding: "24px",
+      ...otherStyle,
     },
   };
 

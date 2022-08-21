@@ -1,7 +1,6 @@
 import React from "react";
 
 import Box from "@mui/material/Box";
-import LaunchIcon from "@mui/icons-material/Launch";
 
 import {
   BACKGROUND_LINEAR_GRADIENT_AQUA,
@@ -15,7 +14,8 @@ import {
 import { WELCOME_SECTION_USERNAME } from "../../../data/dashboardConfig";
 
 import Paragraph from "../../../components/Typography/Paragraph";
-import ExternalLink from "./components/ExternalLink";
+import LaunchLinkIcon from "../../../assets/icons/LaunchLinkIcon";
+import ExternalLink from "../../../components/ExternalLink";
 
 const WelcomeSection = () => {
   const welcomeMessageStyle = {
@@ -52,16 +52,7 @@ const WelcomeSection = () => {
           textDecorationColor: WHITE_COLOR,
         }}
         text={WELCOME_SECTION_PATH}
-        icon={
-          <LaunchIcon
-            sx={{
-              width: "24px",
-              height: "24px",
-              ml: 1.8,
-              fill: WHITE_COLOR,
-            }}
-          />
-        }
+        icon={<LaunchLinkIcon styleProps={{ fill: WHITE_COLOR }} />}
       />
     </Box>
   );

@@ -21,6 +21,8 @@ export const CARD_ORDER_BODY_COLOR_TEXT = "#6C7C8C";
 export const CARD_COMPLETED_TEXT = "#FFA26B";
 
 // font-size
+export const POST_CARD_TITLE_FONT_SIZE = "11px";
+export const POST_CARD_FOOTER_FONT_SIZE = "12px";
 export const MENU_FONT_SIZE = "14px";
 export const HEADER_BUTTON_FONT_SIZE = "15px";
 export const LINK_N_TEXT_FONT_SIZE = "17px";
@@ -29,12 +31,19 @@ export const CARD_TITLE_FONT_SIZE_2 = "22px";
 export const WELCOME_MESSAGE_FONT_SIZE = "34px";
 
 // font-weight
+export const FONT_WEIGHT_300 = "300";
 export const FONT_WEIGHT_400 = "400";
 export const FONT_WEIGHT_500 = "500";
 export const FONT_WEIGHT_600 = "600";
 export const FONT_WEIGHT_700 = "700";
 
+// font-family
+export const PRIMARY_FONT_FAMILY = "Noto Sans , sans-serif";
+
 // line-height
+export const LINE_HEIGHT_POST_CARD_TITLE = "13px";
+export const LINE_HEIGHT_POST_CARD_FOOTER = "12px";
+export const LINE_HEIGHT_POST_CARD_BODY = "20px";
 export const LINE_HEIGHT_MOBILE_CARD = "27px";
 
 // border
@@ -48,4 +57,9 @@ export const PRIMARY_RED_COLOR = "#F33451";
 export const HOME_PAGE_PATH = "/";
 export const WELCOME_SECTION_PATH = "app.vetrinalive.it/fenoh-store";
 
-export const API_URL = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${process.env.REACT_APP_API_KEY}`;
+// export const API_URL = `https://newsapi.org/v2/everything?q=bitcoin&apiKey=${process.env.REACT_APP_API_KEY}`;
+// export const API_URL = `https://newsapi.org/v2/everything?q=bitcoin&pageSize=9&apiKey=${process.env.REACT_APP_API_KEY}`;
+export const API_BASE_URL = "https://newsapi.org/v2/everything";
+export const API_KEY = `apiKey=${process.env.REACT_APP_API_KEY}`;
+
+// pageSize

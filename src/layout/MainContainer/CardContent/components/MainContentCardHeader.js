@@ -9,7 +9,15 @@ import {
 } from "../../../../data/constants";
 import CardHeaderDropdown from "./CardHeaderDropdown";
 
-const MainContentCardHeader = ({ icon, title, hasDropdown }) => {
+const MainContentCardHeader = ({
+  icon,
+  title,
+  hasDropdown,
+  hasRightElement,
+  rightCardHeaderElement,
+  ...styleProps
+}) => {
+  const { fontSize, fontWeight, ...otherStyle } = styleProps.style || {};
   const containerStyle = {
     sx: {
       display: "flex",
@@ -21,18 +29,20 @@ const MainContentCardHeader = ({ icon, title, hasDropdown }) => {
   const titleStyle = {
     sx: {
       paddingLeft: 1,
-      fontSize: CARD_TITLE_FONT_SIZE_1,
-      fontWeight: FONT_WEIGHT_500,
+      fontSize: fontSize ? fontSize : CARD_TITLE_FONT_SIZE_1,
+      fontWeight: fontWeight ? fontWeight : FONT_WEIGHT_500,
+      ...otherStyle,
     },
   };
   return (
     <Box {...containerStyle}>
       <Box sx={{ display: "flex", alignItems: "center" }}>
-        {icon}
+        {icon && icon}
         <Paragraph {...titleStyle}>{title}</Paragraph>
       </Box>
 
       {hasDropdown && <CardHeaderDropdown />}
+      {hasRightElement && rightCardHeaderElement}
     </Box>
   );
 };

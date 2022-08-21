@@ -14,9 +14,9 @@ const MainContainer = () => {
     spacing: 3,
     wrap: "wrap",
   };
-  
+
   return (
-    <Box component="main" sx={{ flexGrow: 1, p: 0 }}>
+    <Box component="main" sx={{ flexGrow: 1, p: 0, marginBottom: 5 }}>
       <WelcomeSection />
       <GridContainer px={"40px"} mt={-6} columnSpacing={3}>
         {/* Main Content */}

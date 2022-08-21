@@ -7,15 +7,22 @@ import { PRIMARY_COLOR_ACTIVE } from "../../../../data/constants";
 
 import ExternalLink from "../../../../components/ExternalLink";
 
-const MainContentCardFooter = ({ children, text, href, hasIcon, color }) => {
+const MainContentCardFooter = ({
+  children,
+  text,
+  href,
+  hasIcon,
+  color,
+  styleProps,
+}) => {
   const footerContent = !children ? (
     <ExternalLink
       href={href}
       target="_blank"
-      sx={{
-        display: "flex",
+      styleProps={{
         color: color || PRIMARY_COLOR_ACTIVE,
         textDecorationColor: color || PRIMARY_COLOR_ACTIVE,
+        ...styleProps,
       }}
       text={text}
       icon={

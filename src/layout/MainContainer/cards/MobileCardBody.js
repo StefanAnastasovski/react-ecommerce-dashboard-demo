@@ -32,11 +32,8 @@ const MobileCardBody = ({
     },
   };
   const styledExternalLink = {
-    sx: {
-      display: "flex",
       color: WHITE_COLOR,
       textDecorationColor: WHITE_COLOR,
-    },
   };
   const styledTopLink = {
     marginTop: 2,
@@ -49,7 +46,7 @@ const MobileCardBody = ({
       const { id, href, source, alt } = icon;
       return (
         <GridItem key={id}>
-          <ExternalLink href={href} target="_blank" {...styledExternalLink}>
+          <ExternalLink href={href} target="_blank" styleProps={styledExternalLink}>
             <Image source={source} alt={alt} />
           </ExternalLink>
         </GridItem>
@@ -66,7 +63,7 @@ const MobileCardBody = ({
             target="_blank"
             text={linkContent}
             icon={hasIcon && linkIcon}
-            {...{ ...styledExternalLink, ...styledTopLink }}
+            styleProps={{ ...styledExternalLink, ...styledTopLink }}
           />
         </GridItem>
         <GridItem>

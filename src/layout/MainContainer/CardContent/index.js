@@ -4,11 +4,12 @@ import GridContainer from "../../../components/Grid/GridContainer";
 import CardWrapper from "./components/CardWrapper";
 
 const MainContentSection = ({ cardDetails, direction, ...otherProps }) => {
-  const content = cardDetails.map(({ id, ...otherDetails }) => {
+  const content = cardDetails.map(({ id, ...otherDetails }, index) => {
     const { header, body, footer, style } = otherDetails;
     return (
       <CardWrapper
         key={id}
+        isLastCard={cardDetails.length - 1 === index}
         headerDetails={header}
         bodyDetails={body}
         footerDetails={footer}
@@ -18,10 +19,7 @@ const MainContentSection = ({ cardDetails, direction, ...otherProps }) => {
   });
 
   return (
-    <GridContainer
-      direction={direction}
-      {...otherProps}
-    >
+    <GridContainer direction={direction} {...otherProps}>
       {content}
     </GridContainer>
   );
