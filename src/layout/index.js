@@ -1,5 +1,3 @@
-import Header from "./Header";
-import SideMenu from "./SideMenu";
-import MainContainer from "./MainContainer";
+import MainLayout from "./MainLayout";
 
-export { SideMenu, MainContainer, Header };
+export { MainLayout };
