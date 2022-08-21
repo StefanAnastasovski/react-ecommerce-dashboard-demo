@@ -52,7 +52,9 @@ const StyledListItem = styled(ListItem)(() => {
   };
 });
 
-const StyledListItemButton = styled(ListItemButton)(({ open }) => ({
+const StyledListItemButton = styled(ListItemButton, {
+  shouldForwardProp: (props) => props !== "open",
+})(({ open }) => ({
   direction: "row",
   minHeight: 48,
   padding: "2.5 0 2.5 0",
@@ -68,13 +70,17 @@ const StyledListItemButton = styled(ListItemButton)(({ open }) => ({
   },
 }));
 
-const StyledListItemIcon = styled(ListItemIcon)(({ open }) => ({
+const StyledListItemIcon = styled(ListItemIcon, {
+  shouldForwardProp: (props) => props !== "open",
+})(({ open }) => ({
   minWidth: 0,
   marginRight: open ? "1rem" : "auto",
   justifyContent: "center",
 }));
 
-const StyledListItemText = styled(ListItemText)(({ open }) => ({
+const StyledListItemText = styled(ListItemText, {
+  shouldForwardProp: (props) => props !== "open",
+})(({ open }) => ({
   fontSize: MENU_FONT_SIZE,
   opacity: open ? 1 : 0,
 }));
@@ -159,11 +165,13 @@ const DrawerItem = ({
           {expandIcon && open && expandIcon}
           {newsIcon && open && newsIcon}
         </StyledListItemButton>
-        {open && <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
-          <List component="ul" disablePadding>
-            {submenuItems}
-          </List>
-        </Collapse>}
+        {open && (
+          <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
+            <List component="ul" disablePadding>
+              {submenuItems}
+            </List>
+          </Collapse>
+        )}
       </StyledListItem>
     </>
   );
