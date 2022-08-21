@@ -18,6 +18,8 @@ const MainContainer = () => {
   return (
     <Box component="main" sx={{ flexGrow: 1, p: 0, marginBottom: 5 }}>
       <WelcomeSection />
+
+      {/* Page */}
       <GridContainer px={"40px"} mt={-6} columnSpacing={3}>
         {/* Main Content */}
         <GridItem xs={8}>

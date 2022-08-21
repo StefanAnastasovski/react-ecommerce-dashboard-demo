@@ -25,7 +25,7 @@ import TrustpilotBody from "../layout/MainContainer/cards/TrustpilotBody";
 import InviteFriendBody from "../layout/MainContainer/cards/InviteFriendBody";
 import CustomerSupportBody from "../layout/MainContainer/cards/CustomerSupportBody";
 import LinkButton from "../components/ui/Button/LinkButton";
-import CustomSlider from "../layout/MainContainer/Slider";
+import CustomSlider from "../features/Slider";
 import { extensions } from "./extensions";
 import ExternalLink from "../components/ExternalLink";
 import LaunchLinkIcon from "../assets/icons/LaunchLinkIcon";

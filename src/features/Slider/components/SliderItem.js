@@ -3,9 +3,9 @@ import React from "react";
 import { Avatar } from "@mui/material";
 import { Box } from "@mui/system";
 
-import { LINK_N_TEXT_FONT_SIZE } from "../../../../data/constants";
+import { LINK_N_TEXT_FONT_SIZE } from "../../../data/constants";
 
-import Paragraph from "../../../../components/Typography/Paragraph";
+import Paragraph from "../../../components/Typography/Paragraph";
 
 const SliderItem = ({ name, description, source }) => {
   const sliderItemStyle = {
