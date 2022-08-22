@@ -9,11 +9,11 @@ import {
   HEADER_BUTTON_FONT_SIZE,
   WELCOME_MESSAGE_FONT_SIZE,
   FONT_WEIGHT_500,
-} from "../../../data/constants";
+} from "../../../../data/constants";
 
-import { DASHBOARD_API } from "../../../data/dashboardConfig";
+import { DASHBOARD_API } from "../../../../data/dashboardConfig";
 
-import Paragraph from "../../../components/Typography/Paragraph";
+import Paragraph from "../../../../components/Typography/Paragraph";
 
 const ConfigureYourShopBody = () => {
   const styledCompleted = {

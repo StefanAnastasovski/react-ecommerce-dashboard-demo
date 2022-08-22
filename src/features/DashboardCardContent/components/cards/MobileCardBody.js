@@ -8,14 +8,14 @@ import {
   LINE_HEIGHT_MOBILE_CARD,
   LINK_N_TEXT_FONT_SIZE,
   WHITE_COLOR,
-} from "../../../data/constants";
-import DEVICE_IMG from "../../../assets/images/device.png";
+} from "../../../../data/constants";
+import DEVICE_IMG from "../../../../assets/images/device.png";
 
-import Paragraph from "../../../components/Typography/Paragraph";
-import GridContainer from "../../../components/Grid/GridContainer";
-import GridItem from "../../../components/Grid/GridItem";
-import Image from "../../../components/Image";
-import ExternalLink from "../../../components/ExternalLink";
+import Paragraph from "../../../../components/Typography/Paragraph";
+import GridItem from "../../../../components/Grid/GridItem";
+import Image from "../../../../components/Image";
+import ExternalLink from "../../../../components/ExternalLink";
+import GridContainer from "../../../../components/Grid/GridContainer";
 
 const MobileCardBody = ({
   body: { title, linkContent, href, hasIcon },
@@ -32,8 +32,8 @@ const MobileCardBody = ({
     },
   };
   const styledExternalLink = {
-      color: WHITE_COLOR,
-      textDecorationColor: WHITE_COLOR,
+    color: WHITE_COLOR,
+    textDecorationColor: WHITE_COLOR,
   };
   const styledTopLink = {
     marginTop: 2,
@@ -46,7 +46,11 @@ const MobileCardBody = ({
       const { id, href, source, alt } = icon;
       return (
         <GridItem key={id}>
-          <ExternalLink href={href} target="_blank" styleProps={styledExternalLink}>
+          <ExternalLink
+            href={href}
+            target="_blank"
+            styleProps={styledExternalLink}
+          >
             <Image source={source} alt={alt} />
           </ExternalLink>
         </GridItem>

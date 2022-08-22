@@ -6,11 +6,11 @@ import {
   FONT_WEIGHT_500,
   LINK_N_TEXT_FONT_SIZE,
   CARD_ORDER_BODY_COLOR_TEXT,
-} from "../../../data/constants";
+} from "../../../../data/constants";
 
-import { DASHBOARD_API } from "../../../data/dashboardConfig";
+import { DASHBOARD_API } from "../../../../data/dashboardConfig";
 
-import Paragraph from "../../../components/Typography/Paragraph";
+import Paragraph from "../../../../components/Typography/Paragraph";
 
 const OrderCardBody = () => {
   const styledText = {

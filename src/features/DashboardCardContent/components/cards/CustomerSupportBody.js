@@ -4,13 +4,13 @@ import { Box } from "@mui/material";
 
 import {
   LINK_N_TEXT_FONT_SIZE,
-} from "../../../data/constants";
-import AGENT_PIC from "../../../assets/images/agent-profile-pic.jpeg";
+} from "../../../../data/constants";
+import AGENT_PIC from "../../../../assets/images/agent-profile-pic.jpeg";
 
-import { DASHBOARD_API } from "../../../data/dashboardConfig";
+import { DASHBOARD_API } from "../../../../data/dashboardConfig";
 
-import Paragraph from "../../../components/Typography/Paragraph";
-import Image from "../../../components/Image";
+import Paragraph from "../../../../components/Typography/Paragraph";
+import Image from "../../../../components/Image";
 
 const CustomerSupportBody = () => {
   const {

@@ -1,9 +1,9 @@
 import React from "react";
 
-import { FONT_WEIGHT_500 } from "../../../data/constants";
-import { DASHBOARD_API } from "../../../data/dashboardConfig";
+import { FONT_WEIGHT_500 } from "../../../../data/constants";
+import { DASHBOARD_API } from "../../../../data/dashboardConfig";
 
-import Paragraph from "../../../components/Typography/Paragraph";
+import Paragraph from "../../../../components/Typography/Paragraph";
 
 const VisitorCardBody = () => {
   const styledText = {

@@ -6,9 +6,9 @@ import {
   LINK_N_TEXT_FONT_SIZE,
   PRIMARY_GREEN_COLOR_ACTIVE,
   FONT_WEIGHT_700,
-} from "../../../data/constants";
+} from "../../../../data/constants";
 
-import Paragraph from "../../../components/Typography/Paragraph";
+import Paragraph from "../../../../components/Typography/Paragraph";
 
 const InviteFriendBody = () => {
   const styledCompleted = {

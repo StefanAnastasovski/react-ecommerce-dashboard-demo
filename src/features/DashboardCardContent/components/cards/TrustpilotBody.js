@@ -7,9 +7,9 @@ import {
   PRIMARY_GREEN_COLOR_ACTIVE,
   WHITE_COLOR,
   FONT_WEIGHT_700,
-} from "../../../data/constants";
+} from "../../../../data/constants";
 
-import Paragraph from "../../../components/Typography/Paragraph";
+import Paragraph from "../../../../components/Typography/Paragraph";
 
 const TrustpilotBody = () => {
   const fontSize = {
