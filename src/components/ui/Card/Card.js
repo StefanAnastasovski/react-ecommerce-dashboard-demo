@@ -4,11 +4,17 @@ import Card from "@mui/material/Card";
 
 import { WHITE_COLOR } from "../../../data/constants";
 
-const CardComponent = ({ children, backgroundColor, height, ...otherProps}) => {
-  const cardStyle = {
+const CardComponent = ({
+  children,
+  backgroundColor,
+  height,
+  otherStyle,
+  ...otherProps
+}) => {
+  const styledCard = {
     sx: {
       display: "flex",
-      flexDirection: "column",
+      direction: "column",
       justifyContent: "space-between",
       background: backgroundColor || WHITE_COLOR,
       boxShadow:
@@ -17,10 +23,15 @@ const CardComponent = ({ children, backgroundColor, height, ...otherProps}) => {
       minWidth: "349px",
       height: height || "220px",
       padding: "24px",
+      ...otherStyle,
     },
   };
 
-  return <Card {...cardStyle} {...otherProps}>{children}</Card>;
+  return (
+    <Card {...styledCard} {...otherProps}>
+      {children}
+    </Card>
+  );
 };
 
 export default CardComponent;

@@ -8,7 +8,6 @@ import LightningIcon from "../../assets/icons/LightningIcon";
 import { SvgIcon } from "@mui/material";
 
 import { useDispatch, useSelector } from "react-redux";
-import { drawerActions, getDrawerWidth } from "../../store/slices/drawerSlice";
 import {
   WHITE_COLOR,
   PRIMARY_BORDER_COLOR,
@@ -16,17 +15,16 @@ import {
   LINK_N_TEXT_FONT_SIZE,
   PRIMARY_RED_COLOR,
   HEADER_BUTTON_FONT_SIZE,
+  DRAWER_WIDTH,
 } from "../../data/constants";
-import { primaryMenuItems, secondaryMenuItems } from "../../data/sidebarData";
 import { mainNewsToday } from "../../data/mainNewsToday";
 
 import GridItem from "../../components/Grid/GridItem";
 import StyledIconButton from "../../components/ui/Button/StyledIconButton";
 import Paragraph from "../../components/Typography/Paragraph";
 import NotificationEllipse from "../../components/NotificationEllipse";
-import GridContainerHeader from "../../components/Grid/GridContainerHeader";
-
-const DRAWER_WIDTH = getDrawerWidth();
+import { drawerActions } from "../../features/Drawer/slices/drawerSlice";
+import GridContainer from "../../components/Grid/GridContainer";
 
 const AppBar = styled(MuiAppBar, {
   shouldForwardProp: (prop) => prop !== "open",
@@ -40,7 +38,7 @@ const AppBar = styled(MuiAppBar, {
       duration: theme.transitions.duration.leavingScreen,
     }),
     ...(open && {
-      marginLeft: DRAWER_WIDTH,
+      marginLeft: "255px",
       width: `calc(100% - ${DRAWER_WIDTH}px)`,
       transition: theme.transitions.create(["width", "margin"], {
         easing: theme.transitions.easing.sharp,
@@ -57,15 +55,9 @@ const Header = () => {
     dispatch(drawerActions.setDrawerOpen());
   };
 
-  const selectedMenuItemId = useSelector(
-    (state) => state.drawer.selectedMenuItemId
+  const selectedMenuItemTitle = useSelector(
+    (state) => state.drawer.selectedMenuItemTitle
   );
-
-  let pageTitleId = [...primaryMenuItems, ...secondaryMenuItems].find(
-    (item) => {
-      return item.id === selectedMenuItemId.id;
-    }
-  ).title;
 
   const mainNewsValue = mainNewsToday.length;
 
@@ -93,7 +85,14 @@ const Header = () => {
       >
         {showMenuIcon}
 
-        <GridContainerHeader>
+        <GridContainer
+          sx={{
+            direction: "row",
+            justifyContent: "space-between",
+            alignItems: "center",
+            m: 2,
+          }}
+        >
           <GridItem>
             <Paragraph
               noWrap
@@ -102,7 +101,7 @@ const Header = () => {
                 fontWeight: FONT_WEIGHT_500,
               }}
             >
-              {pageTitleId}
+              {selectedMenuItemTitle}
             </Paragraph>
           </GridItem>
 
@@ -119,7 +118,7 @@ const Header = () => {
               {mainNewsValue}
             </NotificationEllipse>
           </GridItem>
-        </GridContainerHeader>
+        </GridContainer>
       </Toolbar>
     </AppBar>
   );

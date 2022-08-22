@@ -1,1 +1,0 @@
-export const WELCOME_SECTION_USERNAME = "Mario";

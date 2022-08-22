@@ -1,8 +1,6 @@
 import React from "react";
 
-import Drawer from "./Drawer";
-import DrawerHeader from "./DrawerHeader";
-import DrawerMenu from "./DrawerMenu";
+import { Drawer, DrawerHeader, DrawerMenu } from "../../features/Drawer/";
 
 const SideMenu = () => {
   return (
