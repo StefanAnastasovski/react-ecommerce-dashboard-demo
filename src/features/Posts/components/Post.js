@@ -31,11 +31,13 @@ const Post = ({ postDetails, direction, ...otherProps }) => {
 
   const footerText = (
     <Paragraph
-      fontSize={POST_CARD_FOOTER_FONT_SIZE}
-      fontWeight={FONT_WEIGHT_300}
-      lineHeight={LINE_HEIGHT_POST_CARD_FOOTER}
-      color={PRIMARY_COLOR_TEXT}
-      textDecoration={"underline"}
+      sx={{
+        fontSize: POST_CARD_FOOTER_FONT_SIZE,
+        fontWeight: FONT_WEIGHT_300,
+        lineHeight: LINE_HEIGHT_POST_CARD_FOOTER,
+        color: PRIMARY_COLOR_TEXT,
+        textDecoration: "underline",
+      }}
     >
       {`${formatedAuthor} | ${getDateFromString(publishedAt)}`}
     </Paragraph>
@@ -81,6 +83,7 @@ const Post = ({ postDetails, direction, ...otherProps }) => {
       fontWeight: FONT_WEIGHT_300,
       lineHeight: LINE_HEIGHT_POST_CARD_FOOTER,
       color: PRIMARY_COLOR_TEXT,
+      textDecoration: "underline",
     },
   };
 

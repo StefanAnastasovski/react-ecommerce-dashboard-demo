@@ -7,6 +7,7 @@ import SideMenu from "../SideMenu";
 import MainContainer from "../MainContainer";
 
 const MainLayout = ({ children }) => {
+  console.log(children)
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
