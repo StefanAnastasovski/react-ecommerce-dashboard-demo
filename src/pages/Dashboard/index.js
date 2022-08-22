@@ -1,35 +1,24 @@
 import React from "react";
 
-import { CARD_DETAILS, SIDEBAR_CARD_DETAILS } from "../../data/dashboardConfig";
+import Box from "@mui/material/Box";
+import CssBaseline from "@mui/material/CssBaseline";
 
-import GridItem from "../../components/Grid/GridItem";
-import DashboardCardContent from "../../features/DashboardCardContent/";
+import DashboardMainSection from "../../features/DashboardMainSection";
+
+import Header from "../../layout/Header";
+import SideMenu from "../../layout/SideMenu";
+import MainContainer from "../../layout/MainContainer";
 
 const Dashboard = () => {
-  const cardContentStyle = {
-    spacing: 3,
-    wrap: "wrap",
-  };
-
   return (
-    <>
-      {/* Main Content */}
-      <GridItem xs={8}>
-        <DashboardCardContent
-          cardDetails={CARD_DETAILS}
-          {...cardContentStyle}
-        />
-      </GridItem>
+    <Box sx={{ display: "flex" }}>
+      <CssBaseline />
+      <Header />
 
-      {/* Sidebar*/}
-      <GridItem xs={4}>
-        <DashboardCardContent
-          cardDetails={SIDEBAR_CARD_DETAILS}
-          direction="column"
-          {...cardContentStyle}
-        />
-      </GridItem>
-    </>
+      <SideMenu />
+
+      <DashboardMainSection />
+    </Box>
   );
 };
 
