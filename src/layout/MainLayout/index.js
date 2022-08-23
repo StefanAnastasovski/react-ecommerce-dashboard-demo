@@ -7,15 +7,17 @@ import SideMenu from "../SideMenu";
 import MainContainer from "../MainContainer";
 
 const MainLayout = ({ children }) => {
-  console.log(children)
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <Header />
 
       <SideMenu />
+      
+      <Box sx={{flexGrow: 1}}>
+        <Header />
 
-      <MainContainer page={children} />
+        <MainContainer page={children} />
+      </Box>
     </Box>
   );
 };

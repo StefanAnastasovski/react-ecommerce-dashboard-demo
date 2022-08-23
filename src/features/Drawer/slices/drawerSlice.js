@@ -12,6 +12,7 @@ const initialState = {
     id: primaryMenuItems[0].id,
     subId: "",
   },
+  url: "/",
   selectedMenuItemTitle: primaryMenuItems[0].title,
   selectedDropdownItem: dropdownMenuItems[0].title,
   isExpanded: {},
@@ -23,6 +24,9 @@ const drawerSlice = createSlice({
   reducers: {
     setDrawerOpen: (state) => {
       state.isDrawerOpened = true;
+    },
+    setDrawerUrl: (state, { payload: { url } }) => {
+      state.url = url;
     },
     setDrawerClose: (state) => {
       state.isDrawerOpened = false;

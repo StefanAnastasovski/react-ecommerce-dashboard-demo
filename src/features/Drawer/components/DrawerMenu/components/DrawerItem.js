@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
+import { Link as RouterLink } from "react-router-dom";
+
 import styled from "@emotion/styled";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
 
 import {
   Collapse,
+  Link,
   List,
   ListItem,
   ListItemButton,
@@ -22,13 +25,14 @@ import {
 } from "../../../../../data/constants";
 import { drawerActions } from "../../../slices/drawerSlice";
 import NotificationEllipse from "../../../../../components/NotificationEllipse";
+import { primaryMenuItems } from "../../../data/sidebarData";
 
 const StyledListItem = styled(ListItem)(() => {
   return {
     padding: 0,
     display: "block",
     "& .MuiCollapse-root": {
-      background: SECONDARY_BACKGROUND_COLOR_ACTIVE,
+      // background: SECONDARY_BACKGROUND_COLOR_ACTIVE,
       color: SECONDARY_COLOR_TEXT,
     },
     "&:hover > div:first-of-type": {
@@ -92,12 +96,13 @@ const DrawerItem = ({
   orders,
   ...otherProps
 }) => {
+  const { id, title, subtitles, icon, link } = data;
+
+  const [pathName, setPathName] = useState(link || "/");
   const open = useSelector((state) => state.drawer.isDrawerOpened);
   const isExpanded = useSelector((state) => state.drawer.isExpanded);
   const selectedItem = useSelector((state) => state.drawer.selectedMenuItemId);
-
   const dispatch = useDispatch();
-  const { id, title, subtitles, icon } = data;
 
   let expandIcon = null;
   if (subtitles.length > 0) {
@@ -127,52 +132,74 @@ const DrawerItem = ({
         subId: subId || null,
       })
     );
+    dispatch(drawerActions.setDrawerUrl({ url: link }));
   };
 
-  const submenuItems = subtitles.map(({ subtitleId, subtitle }) => {
+  const submenuItems = subtitles.map(({ subtitleId, subtitle, link }) => {
     return (
-      <ListItem
+      <Link
         key={subtitleId}
-        disablePadding
-        selected={selectedItem.subId === subtitleId}
+        component={RouterLink}
+        to={pathName.concat(link)}
+        sx={{ textDecoration: "none" }}
       >
-        <StyledListItemButton
-          open={open}
-          sx={{ pl: 4 }}
-          onClick={() => onClickMenuHandler(id, false, subtitleId)}
-        >
-          {open && <StyledListItemText open={open} primary={subtitle} />}
-        </StyledListItemButton>
-      </ListItem>
+        <ListItem disablePadding selected={selectedItem.subId === subtitleId}>
+          <StyledListItemButton
+            open={open}
+            sx={{ pl: 4 }}
+            onClick={() => onClickMenuHandler(id, false, subtitleId)}
+          >
+            {open && <StyledListItemText open={open} primary={subtitle} />}
+          </StyledListItemButton>
+        </ListItem>
+      </Link>
     );
   });
 
   return (
     <>
-      <StyledListItem
-        {...styleProps}
-        {...otherProps}
-        selected={selectedItem.id === id}
+      <Link
+        component={RouterLink}
+        to={pathName}
+        sx={{ textDecoration: "none" }}
       >
-        <StyledListItemButton
-          open={open}
-          onClick={() => onClickMenuHandler(id, subtitles.length > 0)}
+        <StyledListItem
+          {...styleProps}
+          {...otherProps}
+          selected={selectedItem.id === id}
         >
-          <StyledListItemIcon open={open}>{icon}</StyledListItemIcon>
+          <StyledListItemButton
+            open={open}
+            onClick={() => onClickMenuHandler(id, subtitles.length > 0)}
+          >
+            <StyledListItemIcon open={open}>{icon}</StyledListItemIcon>
 
-          {open && <ListItemText primary={title} />}
+            {open && <ListItemText primary={title} />}
 
-          {expandIcon && open && expandIcon}
-          {newsIcon && open && newsIcon}
-        </StyledListItemButton>
-        {open && (
-          <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
-            <List component="ul" disablePadding>
-              {submenuItems}
-            </List>
-          </Collapse>
-        )}
-      </StyledListItem>
+            {expandIcon && open && expandIcon}
+            {newsIcon && open && newsIcon}
+          </StyledListItemButton>
+          {/* {open && (
+            <Collapse in={isExpanded[id]} timeout="auto" unmountOnExit>
+              <List component="ul" disablePadding>
+                {submenuItems}
+              </List>
+            </Collapse>
+          )} */}
+        </StyledListItem>
+      </Link>
+      {open && (
+        <Collapse
+          in={isExpanded[id]}
+          timeout="auto"
+          unmountOnExit
+          sx={{ background: SECONDARY_BACKGROUND_COLOR_ACTIVE }}
+        >
+          <List component="ul" disablePadding>
+            {submenuItems}
+          </List>
+        </Collapse>
+      )}
     </>
   );
 };
