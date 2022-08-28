@@ -26,7 +26,7 @@ const DrawerPrimaryMenu = () => {
     );
   });
 
-  return <List>{menuItems}</List>;
+  return <List id="primary-menu">{menuItems}</List>;
 };
 
 export default DrawerPrimaryMenu;

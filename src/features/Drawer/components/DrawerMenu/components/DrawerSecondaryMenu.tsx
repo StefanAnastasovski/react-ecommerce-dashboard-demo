@@ -14,7 +14,7 @@ const DrawerSecondaryMenu = () => {
       <DrawerItem
         key={id}
         data={{
-          id: id, 
+          id: id,
           title: title,
           icon: icon,
           link: link,
@@ -25,7 +25,7 @@ const DrawerSecondaryMenu = () => {
     );
   });
 
-  return <List>{menuItems}</List>;
+  return <List id="secondary-menu">{menuItems}</List>;
 };
 
 export default DrawerSecondaryMenu;

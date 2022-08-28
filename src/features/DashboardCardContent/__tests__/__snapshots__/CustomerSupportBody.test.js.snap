@@ -1,0 +1,303 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CustomerSupportBody /> render() Shallow rendering - MatchSnapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CustomerSupportBody />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <ForwardRef(Box)
+          sx={
+            Object {
+              "height": "40px",
+              "width": "40px",
+            }
+          }
+        >
+          <Image
+            alt="Agent Natalie profile pic"
+            source="agent-profile-pic.jpeg"
+            styleProps={
+              Object {
+                "borderRadius": "50%",
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+          />
+        </ForwardRef(Box)>,
+        <Paragraph
+          styleProps={
+            Object {
+              "fontSize": "17px",
+              "margin": "1em 0",
+              "marginLeft": "1em",
+            }
+          }
+        >
+          Natalie
+           is here to help you.
+        </Paragraph>,
+      ],
+      "my": 2,
+      "sx": Object {
+        "alignItems": "center",
+        "display": "flex",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Image
+            alt="Agent Natalie profile pic"
+            source="agent-profile-pic.jpeg"
+            styleProps={
+              Object {
+                "borderRadius": "50%",
+                "height": "100%",
+                "width": "100%",
+              }
+            }
+          />,
+          "sx": Object {
+            "height": "40px",
+            "width": "40px",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "alt": "Agent Natalie profile pic",
+            "source": "agent-profile-pic.jpeg",
+            "styleProps": Object {
+              "borderRadius": "50%",
+              "height": "100%",
+              "width": "100%",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": Object {
+          "$$typeof": Symbol(react.forward_ref),
+          "propTypes": Object {
+            "children": [Function],
+            "component": [Function],
+            "sx": [Function],
+          },
+          "render": [Function],
+        },
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            "Natalie",
+            " is here to help you.",
+          ],
+          "styleProps": Object {
+            "fontSize": "17px",
+            "margin": "1em 0",
+            "marginLeft": "1em",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          "Natalie",
+          " is here to help you.",
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": Object {
+      "$$typeof": Symbol(react.forward_ref),
+      "propTypes": Object {
+        "children": [Function],
+        "component": [Function],
+        "sx": [Function],
+      },
+      "render": [Function],
+    },
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <ForwardRef(Box)
+            sx={
+              Object {
+                "height": "40px",
+                "width": "40px",
+              }
+            }
+          >
+            <Image
+              alt="Agent Natalie profile pic"
+              source="agent-profile-pic.jpeg"
+              styleProps={
+                Object {
+                  "borderRadius": "50%",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />
+          </ForwardRef(Box)>,
+          <Paragraph
+            styleProps={
+              Object {
+                "fontSize": "17px",
+                "margin": "1em 0",
+                "marginLeft": "1em",
+              }
+            }
+          >
+            Natalie
+             is here to help you.
+          </Paragraph>,
+        ],
+        "my": 2,
+        "sx": Object {
+          "alignItems": "center",
+          "display": "flex",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": <Image
+              alt="Agent Natalie profile pic"
+              source="agent-profile-pic.jpeg"
+              styleProps={
+                Object {
+                  "borderRadius": "50%",
+                  "height": "100%",
+                  "width": "100%",
+                }
+              }
+            />,
+            "sx": Object {
+              "height": "40px",
+              "width": "40px",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "alt": "Agent Natalie profile pic",
+              "source": "agent-profile-pic.jpeg",
+              "styleProps": Object {
+                "borderRadius": "50%",
+                "height": "100%",
+                "width": "100%",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": Object {
+            "$$typeof": Symbol(react.forward_ref),
+            "propTypes": Object {
+              "children": [Function],
+              "component": [Function],
+              "sx": [Function],
+            },
+            "render": [Function],
+          },
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              "Natalie",
+              " is here to help you.",
+            ],
+            "styleProps": Object {
+              "fontSize": "17px",
+              "margin": "1em 0",
+              "marginLeft": "1em",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            "Natalie",
+            " is here to help you.",
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": Object {
+        "$$typeof": Symbol(react.forward_ref),
+        "propTypes": Object {
+          "children": [Function],
+          "component": [Function],
+          "sx": [Function],
+        },
+        "render": [Function],
+      },
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+}
+`;

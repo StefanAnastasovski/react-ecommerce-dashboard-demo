@@ -1,0 +1,1042 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SomeComponent component Shallow rendering - MatchSnapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MobileCardBody
+    body={
+      Object {
+        "hasIcon": true,
+        "href": "https://www.apple.com/app-store/",
+        "linkContent": "Show More",
+        "title": "Sell your products on your exclusive APP published on the stores",
+      }
+    }
+    footer={
+      Array [
+        Object {
+          "alt": "App Store",
+          "href": "https://apple.com",
+          "id": "stimg1",
+          "source": "app-store.png",
+        },
+        Object {
+          "alt": "Google Play Store",
+          "href": "https://google.com",
+          "id": "stimg2",
+          "source": "google-play-store.png",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <GridItem
+          styleProps={
+            Object {
+              "display": "flex",
+              "gap": 3,
+            }
+          }
+        >
+          <GridItem>
+            <Paragraph
+              styleProps={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": "22px",
+                  "fontWeight": "500",
+                  "lineHeight": "27px",
+                }
+              }
+            >
+              Sell your products on your exclusive APP published on the stores
+            </Paragraph>
+            <ExternalLink
+              href="https://www.apple.com/app-store/"
+              icon={
+                <UNDEFINED
+                  sx={
+                    Object {
+                      "fill": "#FFFFFF",
+                      "marginLeft": 2.5,
+                    }
+                  }
+                />
+              }
+              styleProps={
+                Object {
+                  "color": "#FFFFFF",
+                  "fontSize": "17px",
+                  "marginTop": 2,
+                  "textDecorationColor": "#FFFFFF",
+                }
+              }
+              target="_blank"
+              text="Show More"
+            />
+          </GridItem>
+          <GridItem>
+            <Image
+              alt="device image"
+              source="device.png"
+              width="105px"
+            />
+          </GridItem>
+        </GridItem>,
+        <GridItem
+          styleProps={
+            Object {
+              "display": "flex",
+              "flexGrow": 1,
+              "justifyContent": "space-between",
+            }
+          }
+        >
+          <GridItem
+            styleProps={
+              Object {
+                "alignSelf": "end",
+              }
+            }
+          >
+            <ExternalLink
+              href="https://apple.com"
+              styleProps={
+                Object {
+                  "color": "#FFFFFF",
+                  "textDecorationColor": "#FFFFFF",
+                }
+              }
+              target="_blank"
+            >
+              <Image
+                alt="App Store"
+                source="app-store.png"
+              />
+            </ExternalLink>
+          </GridItem>
+          <GridItem
+            styleProps={
+              Object {
+                "alignSelf": "end",
+              }
+            }
+          >
+            <ExternalLink
+              href="https://google.com"
+              styleProps={
+                Object {
+                  "color": "#FFFFFF",
+                  "textDecorationColor": "#FFFFFF",
+                }
+              }
+              target="_blank"
+            >
+              <Image
+                alt="Google Play Store"
+                source="google-play-store.png"
+              />
+            </ExternalLink>
+          </GridItem>
+        </GridItem>,
+      ],
+      "spacing": "3.65",
+      "styleProps": Object {
+        "height": "100%",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <GridItem>
+              <Paragraph
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": "22px",
+                    "fontWeight": "500",
+                    "lineHeight": "27px",
+                  }
+                }
+              >
+                Sell your products on your exclusive APP published on the stores
+              </Paragraph>
+              <ExternalLink
+                href="https://www.apple.com/app-store/"
+                icon={
+                  <UNDEFINED
+                    sx={
+                      Object {
+                        "fill": "#FFFFFF",
+                        "marginLeft": 2.5,
+                      }
+                    }
+                  />
+                }
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": "17px",
+                    "marginTop": 2,
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+                text="Show More"
+              />
+            </GridItem>,
+            <GridItem>
+              <Image
+                alt="device image"
+                source="device.png"
+                width="105px"
+              />
+            </GridItem>,
+          ],
+          "styleProps": Object {
+            "display": "flex",
+            "gap": 3,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <Paragraph
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontSize": "22px",
+                      "fontWeight": "500",
+                      "lineHeight": "27px",
+                    }
+                  }
+                >
+                  Sell your products on your exclusive APP published on the stores
+                </Paragraph>,
+                <ExternalLink
+                  href="https://www.apple.com/app-store/"
+                  icon={
+                    <UNDEFINED
+                      sx={
+                        Object {
+                          "fill": "#FFFFFF",
+                          "marginLeft": 2.5,
+                        }
+                      }
+                    />
+                  }
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontSize": "17px",
+                      "marginTop": 2,
+                      "textDecorationColor": "#FFFFFF",
+                    }
+                  }
+                  target="_blank"
+                  text="Show More"
+                />,
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Sell your products on your exclusive APP published on the stores",
+                  "styleProps": Object {
+                    "color": "#FFFFFF",
+                    "fontSize": "22px",
+                    "fontWeight": "500",
+                    "lineHeight": "27px",
+                  },
+                },
+                "ref": null,
+                "rendered": "Sell your products on your exclusive APP published on the stores",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "href": "https://www.apple.com/app-store/",
+                  "icon": <UNDEFINED
+                    sx={
+                      Object {
+                        "fill": "#FFFFFF",
+                        "marginLeft": 2.5,
+                      }
+                    }
+                  />,
+                  "styleProps": Object {
+                    "color": "#FFFFFF",
+                    "fontSize": "17px",
+                    "marginTop": 2,
+                    "textDecorationColor": "#FFFFFF",
+                  },
+                  "target": "_blank",
+                  "text": "Show More",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Image
+                alt="device image"
+                source="device.png"
+                width="105px"
+              />,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "alt": "device image",
+                "source": "device.png",
+                "width": "105px",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <GridItem
+              styleProps={
+                Object {
+                  "alignSelf": "end",
+                }
+              }
+            >
+              <ExternalLink
+                href="https://apple.com"
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="App Store"
+                  source="app-store.png"
+                />
+              </ExternalLink>
+            </GridItem>,
+            <GridItem
+              styleProps={
+                Object {
+                  "alignSelf": "end",
+                }
+              }
+            >
+              <ExternalLink
+                href="https://google.com"
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="Google Play Store"
+                  source="google-play-store.png"
+                />
+              </ExternalLink>
+            </GridItem>,
+          ],
+          "styleProps": Object {
+            "display": "flex",
+            "flexGrow": 1,
+            "justifyContent": "space-between",
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": "stimg1",
+            "nodeType": "function",
+            "props": Object {
+              "children": <ExternalLink
+                href="https://apple.com"
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="App Store"
+                  source="app-store.png"
+                />
+              </ExternalLink>,
+              "styleProps": Object {
+                "alignSelf": "end",
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Image
+                  alt="App Store"
+                  source="app-store.png"
+                />,
+                "href": "https://apple.com",
+                "styleProps": Object {
+                  "color": "#FFFFFF",
+                  "textDecorationColor": "#FFFFFF",
+                },
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "alt": "App Store",
+                  "source": "app-store.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": "stimg2",
+            "nodeType": "function",
+            "props": Object {
+              "children": <ExternalLink
+                href="https://google.com"
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="Google Play Store"
+                  source="google-play-store.png"
+                />
+              </ExternalLink>,
+              "styleProps": Object {
+                "alignSelf": "end",
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Image
+                  alt="Google Play Store"
+                  source="google-play-store.png"
+                />,
+                "href": "https://google.com",
+                "styleProps": Object {
+                  "color": "#FFFFFF",
+                  "textDecorationColor": "#FFFFFF",
+                },
+                "target": "_blank",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "alt": "Google Play Store",
+                  "source": "google-play-store.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <GridItem
+            styleProps={
+              Object {
+                "display": "flex",
+                "gap": 3,
+              }
+            }
+          >
+            <GridItem>
+              <Paragraph
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": "22px",
+                    "fontWeight": "500",
+                    "lineHeight": "27px",
+                  }
+                }
+              >
+                Sell your products on your exclusive APP published on the stores
+              </Paragraph>
+              <ExternalLink
+                href="https://www.apple.com/app-store/"
+                icon={
+                  <UNDEFINED
+                    sx={
+                      Object {
+                        "fill": "#FFFFFF",
+                        "marginLeft": 2.5,
+                      }
+                    }
+                  />
+                }
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "fontSize": "17px",
+                    "marginTop": 2,
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+                text="Show More"
+              />
+            </GridItem>
+            <GridItem>
+              <Image
+                alt="device image"
+                source="device.png"
+                width="105px"
+              />
+            </GridItem>
+          </GridItem>,
+          <GridItem
+            styleProps={
+              Object {
+                "display": "flex",
+                "flexGrow": 1,
+                "justifyContent": "space-between",
+              }
+            }
+          >
+            <GridItem
+              styleProps={
+                Object {
+                  "alignSelf": "end",
+                }
+              }
+            >
+              <ExternalLink
+                href="https://apple.com"
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="App Store"
+                  source="app-store.png"
+                />
+              </ExternalLink>
+            </GridItem>
+            <GridItem
+              styleProps={
+                Object {
+                  "alignSelf": "end",
+                }
+              }
+            >
+              <ExternalLink
+                href="https://google.com"
+                styleProps={
+                  Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  }
+                }
+                target="_blank"
+              >
+                <Image
+                  alt="Google Play Store"
+                  source="google-play-store.png"
+                />
+              </ExternalLink>
+            </GridItem>
+          </GridItem>,
+        ],
+        "spacing": "3.65",
+        "styleProps": Object {
+          "height": "100%",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <GridItem>
+                <Paragraph
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontSize": "22px",
+                      "fontWeight": "500",
+                      "lineHeight": "27px",
+                    }
+                  }
+                >
+                  Sell your products on your exclusive APP published on the stores
+                </Paragraph>
+                <ExternalLink
+                  href="https://www.apple.com/app-store/"
+                  icon={
+                    <UNDEFINED
+                      sx={
+                        Object {
+                          "fill": "#FFFFFF",
+                          "marginLeft": 2.5,
+                        }
+                      }
+                    />
+                  }
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "fontSize": "17px",
+                      "marginTop": 2,
+                      "textDecorationColor": "#FFFFFF",
+                    }
+                  }
+                  target="_blank"
+                  text="Show More"
+                />
+              </GridItem>,
+              <GridItem>
+                <Image
+                  alt="device image"
+                  source="device.png"
+                  width="105px"
+                />
+              </GridItem>,
+            ],
+            "styleProps": Object {
+              "display": "flex",
+              "gap": 3,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": Array [
+                  <Paragraph
+                    styleProps={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": "22px",
+                        "fontWeight": "500",
+                        "lineHeight": "27px",
+                      }
+                    }
+                  >
+                    Sell your products on your exclusive APP published on the stores
+                  </Paragraph>,
+                  <ExternalLink
+                    href="https://www.apple.com/app-store/"
+                    icon={
+                      <UNDEFINED
+                        sx={
+                          Object {
+                            "fill": "#FFFFFF",
+                            "marginLeft": 2.5,
+                          }
+                        }
+                      />
+                    }
+                    styleProps={
+                      Object {
+                        "color": "#FFFFFF",
+                        "fontSize": "17px",
+                        "marginTop": 2,
+                        "textDecorationColor": "#FFFFFF",
+                      }
+                    }
+                    target="_blank"
+                    text="Show More"
+                  />,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Sell your products on your exclusive APP published on the stores",
+                    "styleProps": Object {
+                      "color": "#FFFFFF",
+                      "fontSize": "22px",
+                      "fontWeight": "500",
+                      "lineHeight": "27px",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Sell your products on your exclusive APP published on the stores",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "href": "https://www.apple.com/app-store/",
+                    "icon": <UNDEFINED
+                      sx={
+                        Object {
+                          "fill": "#FFFFFF",
+                          "marginLeft": 2.5,
+                        }
+                      }
+                    />,
+                    "styleProps": Object {
+                      "color": "#FFFFFF",
+                      "fontSize": "17px",
+                      "marginTop": 2,
+                      "textDecorationColor": "#FFFFFF",
+                    },
+                    "target": "_blank",
+                    "text": "Show More",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Image
+                  alt="device image"
+                  source="device.png"
+                  width="105px"
+                />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "alt": "device image",
+                  "source": "device.png",
+                  "width": "105px",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <GridItem
+                styleProps={
+                  Object {
+                    "alignSelf": "end",
+                  }
+                }
+              >
+                <ExternalLink
+                  href="https://apple.com"
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "textDecorationColor": "#FFFFFF",
+                    }
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    alt="App Store"
+                    source="app-store.png"
+                  />
+                </ExternalLink>
+              </GridItem>,
+              <GridItem
+                styleProps={
+                  Object {
+                    "alignSelf": "end",
+                  }
+                }
+              >
+                <ExternalLink
+                  href="https://google.com"
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "textDecorationColor": "#FFFFFF",
+                    }
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    alt="Google Play Store"
+                    source="google-play-store.png"
+                  />
+                </ExternalLink>
+              </GridItem>,
+            ],
+            "styleProps": Object {
+              "display": "flex",
+              "flexGrow": 1,
+              "justifyContent": "space-between",
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": "stimg1",
+              "nodeType": "function",
+              "props": Object {
+                "children": <ExternalLink
+                  href="https://apple.com"
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "textDecorationColor": "#FFFFFF",
+                    }
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    alt="App Store"
+                    source="app-store.png"
+                  />
+                </ExternalLink>,
+                "styleProps": Object {
+                  "alignSelf": "end",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Image
+                    alt="App Store"
+                    source="app-store.png"
+                  />,
+                  "href": "https://apple.com",
+                  "styleProps": Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  },
+                  "target": "_blank",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "alt": "App Store",
+                    "source": "app-store.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": "stimg2",
+              "nodeType": "function",
+              "props": Object {
+                "children": <ExternalLink
+                  href="https://google.com"
+                  styleProps={
+                    Object {
+                      "color": "#FFFFFF",
+                      "textDecorationColor": "#FFFFFF",
+                    }
+                  }
+                  target="_blank"
+                >
+                  <Image
+                    alt="Google Play Store"
+                    source="google-play-store.png"
+                  />
+                </ExternalLink>,
+                "styleProps": Object {
+                  "alignSelf": "end",
+                },
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Image
+                    alt="Google Play Store"
+                    source="google-play-store.png"
+                  />,
+                  "href": "https://google.com",
+                  "styleProps": Object {
+                    "color": "#FFFFFF",
+                    "textDecorationColor": "#FFFFFF",
+                  },
+                  "target": "_blank",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "alt": "Google Play Store",
+                    "source": "google-play-store.png",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+}
+`;

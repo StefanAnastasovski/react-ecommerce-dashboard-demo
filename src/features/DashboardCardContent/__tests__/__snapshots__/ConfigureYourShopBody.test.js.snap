@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConfigureYourShopBody /> render() Shallow rendering - MatchSnapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ConfigureYourShopBody />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Paragraph
+          styleProps={
+            Object {
+              "color": "#FFA26B",
+              "fontSize": "34px",
+              "fontWeight": "600",
+              "marginTop": 3,
+            }
+          }
+        >
+          45
+          %
+          <ForwardRef(Box)
+            color="#FFA26B"
+            component="span"
+            display="block"
+            fontSize="15px"
+            fontWeight="500"
+            marginTop={-1.5}
+          >
+            Completed
+          </ForwardRef(Box)>
+        </Paragraph>,
+        <Paragraph
+          styleProps={
+            Object {
+              "fontSize": "17px",
+              "margin": "1em 0",
+            }
+          }
+        >
+          Complete all the steps to have a complete shop to best present to your customers.
+        </Paragraph>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            45,
+            "%",
+            <ForwardRef(Box)
+              color="#FFA26B"
+              component="span"
+              display="block"
+              fontSize="15px"
+              fontWeight="500"
+              marginTop={-1.5}
+            >
+              Completed
+            </ForwardRef(Box)>,
+          ],
+          "styleProps": Object {
+            "color": "#FFA26B",
+            "fontSize": "34px",
+            "fontWeight": "600",
+            "marginTop": 3,
+          },
+        },
+        "ref": null,
+        "rendered": Array [
+          45,
+          "%",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": "Completed",
+              "color": "#FFA26B",
+              "component": "span",
+              "display": "block",
+              "fontSize": "15px",
+              "fontWeight": "500",
+              "marginTop": -1.5,
+            },
+            "ref": null,
+            "rendered": "Completed",
+            "type": Object {
+              "$$typeof": Symbol(react.forward_ref),
+              "propTypes": Object {
+                "children": [Function],
+                "component": [Function],
+                "sx": [Function],
+              },
+              "render": [Function],
+            },
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Complete all the steps to have a complete shop to best present to your customers.",
+          "styleProps": Object {
+            "fontSize": "17px",
+            "margin": "1em 0",
+          },
+        },
+        "ref": null,
+        "rendered": "Complete all the steps to have a complete shop to best present to your customers.",
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Paragraph
+            styleProps={
+              Object {
+                "color": "#FFA26B",
+                "fontSize": "34px",
+                "fontWeight": "600",
+                "marginTop": 3,
+              }
+            }
+          >
+            45
+            %
+            <ForwardRef(Box)
+              color="#FFA26B"
+              component="span"
+              display="block"
+              fontSize="15px"
+              fontWeight="500"
+              marginTop={-1.5}
+            >
+              Completed
+            </ForwardRef(Box)>
+          </Paragraph>,
+          <Paragraph
+            styleProps={
+              Object {
+                "fontSize": "17px",
+                "margin": "1em 0",
+              }
+            }
+          >
+            Complete all the steps to have a complete shop to best present to your customers.
+          </Paragraph>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              45,
+              "%",
+              <ForwardRef(Box)
+                color="#FFA26B"
+                component="span"
+                display="block"
+                fontSize="15px"
+                fontWeight="500"
+                marginTop={-1.5}
+              >
+                Completed
+              </ForwardRef(Box)>,
+            ],
+            "styleProps": Object {
+              "color": "#FFA26B",
+              "fontSize": "34px",
+              "fontWeight": "600",
+              "marginTop": 3,
+            },
+          },
+          "ref": null,
+          "rendered": Array [
+            45,
+            "%",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Completed",
+                "color": "#FFA26B",
+                "component": "span",
+                "display": "block",
+                "fontSize": "15px",
+                "fontWeight": "500",
+                "marginTop": -1.5,
+              },
+              "ref": null,
+              "rendered": "Completed",
+              "type": Object {
+                "$$typeof": Symbol(react.forward_ref),
+                "propTypes": Object {
+                  "children": [Function],
+                  "component": [Function],
+                  "sx": [Function],
+                },
+                "render": [Function],
+              },
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Complete all the steps to have a complete shop to best present to your customers.",
+            "styleProps": Object {
+              "fontSize": "17px",
+              "margin": "1em 0",
+            },
+          },
+          "ref": null,
+          "rendered": "Complete all the steps to have a complete shop to best present to your customers.",
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromError": true,
+          "getDerivedStateFromProps": Object {
+            "hasShouldComponentUpdateBug": false,
+          },
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    Symbol(enzyme.__providerValues__): undefined,
+  },
+  Symbol(enzyme.__providerValues__): Map {},
+}
+`;
