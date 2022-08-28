@@ -1,4 +1,5 @@
 import axios, { AxiosRequestConfig } from "axios";
+import { API_BASE_URL, API_KEY } from "../data/constants";
 
 interface fetchDataConfigType {
   method?: string;
@@ -22,7 +23,7 @@ export const fetchData = async (config: fetchDataConfigType) => {
   return await axios({
     method: method ? method : "get",
     headers: headers && headers,
-    url: url,
+    url: url || `${API_BASE_URL}?q="bitcoin"&pageSize=8&${API_KEY}`,
     data: body && JSON.stringify(body),
   })
     .then((res) => {
