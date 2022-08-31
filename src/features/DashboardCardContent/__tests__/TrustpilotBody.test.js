@@ -5,7 +5,7 @@ import TrustpilotBody from "../components/cards/TrustpilotBody";
 
 describe("<TrustpilotBody />", () => {
   describe("render()", () => {
-    it.skip("Shallow rendering - MatchSnapshot", () => {
+    it("Shallow rendering - MatchSnapshot", () => {
       const component = shallow(<TrustpilotBody />);
       expect(component).toMatchSnapshot();
     });

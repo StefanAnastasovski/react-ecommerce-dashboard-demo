@@ -22,12 +22,12 @@ const highlightedText = {
 
 describe("<InviteFriendBody />", () => {
   describe("render()", () => {
-    it.skip("Shallow rendering - MatchSnapshot", () => {
+    it("Shallow rendering - MatchSnapshot", () => {
       const component = shallow(<InviteFriendBody />);
       expect(component).toMatchSnapshot();
     });
 
-    it.skip("Shallow rendering - contains", () => {
+    it("Shallow rendering - contains", () => {
       const component = shallow(<InviteFriendBody />);
       expect(
         component.containsMatchingElement(

@@ -6,6 +6,8 @@ import GOOGLEPLAY_IMG from "../../../assets/images/google-play-store.png";
 import MobileCardBody from "../components/cards/MobileCardBody";
 import Paragraph from "../../../components/Typography/Paragraph";
 
+import { render, screen } from "@testing-library/react";
+
 const props = {
   body: {
     title: "Sell your products on your exclusive APP published on the stores",
@@ -30,19 +32,13 @@ const props = {
 };
 
 describe("SomeComponent component", () => {
-  it.skip("Shallow rendering - MatchSnapshot", () => {
+  it("Shallow rendering - MatchSnapshot", () => {
     const component = shallow(<MobileCardBody {...props} />);
     expect(component).toMatchSnapshot();
   });
 
-  it.skip("Shallow rendering - match content", () => {
+  it("Shallow rendering - match content", () => {
     const component = shallow(<MobileCardBody />);
     expect(component.find(<Paragraph children={props.body.title} />));
   });
-
-  // it("Configure your shop card render testing", () => {
-  //   render(<MobileCardBody />);
-  //   const element = screen.getByText("Show More");
-  //   expect(element).toBeInTheDocument();
-  // });
 });

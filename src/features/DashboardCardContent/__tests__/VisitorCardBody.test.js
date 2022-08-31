@@ -5,7 +5,7 @@ import VisitorCardBody from "../components/cards/VisitorCardBody";
 
 describe("<VisitorCardBody />", () => {
   describe("render()", () => {
-    it.skip("Shallow rendering - MatchSnapshot", () => {
+    it("Shallow rendering - MatchSnapshot", () => {
       const component = shallow(<VisitorCardBody />);
       expect(component).toMatchSnapshot();
     });

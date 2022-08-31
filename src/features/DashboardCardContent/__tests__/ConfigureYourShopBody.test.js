@@ -6,11 +6,11 @@ import ConfigureYourShopBody from "../components/cards/ConfigureYourShopBody";
 
 describe("<ConfigureYourShopBody />", () => {
   describe("render()", () => {
-    it.skip("Shallow rendering - MatchSnapshot", () => {
+    it("Shallow rendering - MatchSnapshot", () => {
       const component = shallow(<ConfigureYourShopBody />);
       expect(component).toMatchSnapshot();
     });
-    test.skip("Configure your shop card render testing", () => {
+    test("Configure your shop card render testing", () => {
       const { getByText } = render(<ConfigureYourShopBody />);
       expect(
         getByText("complete all the steps", { exact: false })
