@@ -18,12 +18,9 @@ import ExternalLink from "../../../../components/ExternalLink";
 import GridContainer from "../../../../components/Grid/GridContainer";
 import MobileCardBodyType from "../../../../@types/MobileCardBodyType";
 
-const MobileCardBody = ({
-  body: { title, linkContent, href, hasIcon },
-  footer: footerIcons,
-}: MobileCardBodyType) => {
+const MobileCardBody = ({ body, footer: footerIcons }: MobileCardBodyType) => {
+  const { title, linkContent, href, hasIcon } = body || {};
   const linkIcon = <ArrowRight sx={{ marginLeft: 2.5, fill: WHITE_COLOR }} />;
-
   const styledParagraph = {
     fontSize: CARD_TITLE_FONT_SIZE_2,
     fontWeight: FONT_WEIGHT_500,
@@ -57,7 +54,7 @@ const MobileCardBody = ({
     });
 
   return (
-    <GridContainer spacing="3.65" styleProps={{height: "100%"}}>
+    <GridContainer spacing="3.65" styleProps={{ height: "100%" }}>
       <GridItem styleProps={{ display: "flex", gap: 3 }}>
         <GridItem>
           <Paragraph styleProps={styledParagraph}>{title}</Paragraph>
